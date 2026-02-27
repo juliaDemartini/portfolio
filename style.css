@@ -3,133 +3,199 @@
     --card-bg: #1e293b;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --accent: #38bdf8; /* Azul Sky moderno */
+    --accent: #38bdf8;
     --accent-hover: #0ea5e9;
+    --border: #334155;
+}
+
+/* Reset básico para evitar comportamentos estranhos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text-primary);
-    margin: 0;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* Header mais impactante */
 header {
-    height: 60vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle at top right, #1e293b, #0f172a);
     text-align: center;
-    padding: 0 20px;
+    padding: 60px 20px;
 }
 
-h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
+header h1 { 
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    margin-bottom: 0.5rem; 
+    letter-spacing: -2px;
+    font-weight: 800;
+}
 
+/* Badges da Stack Principal */
 .stack-badges {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .badge {
     background: rgba(56, 189, 248, 0.1);
     border: 1px solid var(--accent);
     color: var(--accent);
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
     font-weight: 600;
 }
 
+/* Container principal com margens corrigidas */
 .container {
     max-width: 1100px;
-    margin: -50px auto 50px;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
+/* Títulos das Seções */
+.section-title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Grid de Projetos */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 .card {
     background: var(--card-bg);
-    border: 1px solid #334155;
-    border-radius: 12px;
-    padding: 24px;
-    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
-}
-
-.card h3 { color: var(--accent); margin-bottom: 12px; }
-
-.card p { color: var(--text-secondary); font-size: 0.95rem; flex-grow: 1; }
-
-.tech-tags {
-    margin-top: 15px;
-    font-size: 0.75rem;
-    color: var(--accent);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Novas seções profissionais */
-.section-title {
-    margin-top: 60px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
 .category-label {
     color: var(--accent);
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card h3 { 
+    font-size: 1.5rem;
+    margin-bottom: 15px; 
+}
+
+.card p { 
+    color: var(--text-secondary); 
+    font-size: 1rem; 
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.tech-tags span {
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'monospace';
+}
+
+/* Seção de Certificados */
+#cert-list {
+    display: grid;
+    gap: 15px;
 }
 
 .cert-item {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 15px;
-    border-left: 3px solid var(--accent);
-    margin-bottom: 10px;
-    border-radius: 4px;
+    background: var(--card-bg);
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Contato */
 .contact-links {
-    margin-top: 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .contact-links a {
     color: var(--text-primary);
     text-decoration: none;
-    margin: 0 15px;
     font-weight: 600;
-    border-bottom: 1px solid var(--accent);
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 .contact-links a:hover {
-    color: var(--accent);
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
 }
 
-/* Destaque para palavras-chave */
-.tech-tags span {
-    margin-right: 8px;
-    opacity: 0.8;
+footer { 
+    text-align: center; 
+    padding: 60px 20px; 
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+    margin-top: 100px;
 }
 
-footer { text-align: center; padding: 40px; color: var(--text-secondary); }
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    header h1 { font-size: 2.5rem; }
+    .grid { grid-template-columns: 1fr; }
+    .cert-item { flex-direction: column; align-items: flex-start; gap: 5px; }
+}
