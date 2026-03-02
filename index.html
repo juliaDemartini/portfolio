@@ -1,50 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julia | Full Stack Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ponto Musical</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .btn-login {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      background-color: #ffffff;
+      color: #2c3e50;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-login:hover {
+      background-color: #ecf0f1;
+    }
+  </style>
 </head>
 <body>
-
-    <header>
-        <h1>Julia</h1>
-        <p style="color: var(--text-secondary); font-size: 1.2rem;">Software Engineer & Full Stack Developer</p>
-        <div class="stack-badges">
-            <span class="badge">C# / .NET</span>
-            <span class="badge">JavaScript / React</span>
-            <span class="badge">AWS Cloud</span>
-            <span class="badge">SQL & NoSQL</span>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="section-title">
-            <h2>Featured Projects</h2>
-        </div>
-        <div class="grid" id="project-grid"></div>
-
-        <div class="section-title">
-            <h2>Certifications & Education</h2>
-        </div>
-        <div id="cert-list"></div>
-
-        <div style="text-align: center; margin-top: 80px;">
-            <h2>Vamos construir algo juntos?</h2>
-            <div class="contact-links">
-                <a href="https://linkedin.com/in/juliaDemartini" target="_blank">LinkedIn</a>
-                <a href="https://github.com/juliaDemartini" target="_blank">GitHub</a>
-                <a href="mailto:seu-email@exemplo.com">E-mail</a>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>Built with Code & Coffee • 2026</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Bem-vindo ao Ponto Musical 🎵</h1>
+    <p>Seu novo site está no ar com Firebase Hosting!</p>
+    <a href="login.html" class="btn-login">Entrar</a>
+  </div>
 </body>
 </html>
