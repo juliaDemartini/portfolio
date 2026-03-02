@@ -1,55 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ponto Musical</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #2c3e50, #3498db);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      font-size: 3em;
-    }
-
-    .btn-login {
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 1.1em;
-      background-color: #ffffff;
-      color: #2c3e50;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-    }
-
-    .btn-login:hover {
-      background-color: #ecf0f1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia | Full Stack Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Bem-vindo ao Ponto Musical 🎵</h1>
-    <p>Seu novo site está no ar com Firebase Hosting!</p>
-    <a href="login.html" class="btn-login">Entrar</a>
-  </div>
+
+    <header>
+        <h1>Julia</h1>
+        <p class="subtitle">Software Engineer & Full Stack Developer</p>
+        <div class="stack-badges">
+            <span class="badge">C# / .NET</span>
+            <span class="badge">JavaScript / React</span>
+            <span class="badge">AWS Cloud</span>
+            <span class="badge">SQL & NoSQL</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-title">
+            <h2>Featured Projects</h2>
+        </section>
+        <div class="grid" id="project-grid">
+            </div>
+
+        <section class="section-title">
+            <h2>Certifications & Education</h2>
+        </section>
+        <div id="cert-list">
+            </div>
+
+        <section class="contact-section">
+            <h2>Vamos construir algo juntos?</h2>
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/juliaDemartini" target="_blank">LinkedIn</a>
+                <a href="https://github.com/juliaDemartini" target="_blank">GitHub</a>
+                <a href="mailto:seu-email@exemplo.com">E-mail</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with Code & Coffee • 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
