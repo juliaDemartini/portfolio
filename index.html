@@ -3,48 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julia | Full Stack Engineer</title>
+    <title>Julia | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
-        <h1>Julia</h1>
-        <p class="subtitle">Software Engineer & Full Stack Developer</p>
-        <div class="stack-badges">
-            <span class="badge">C# / .NET</span>
-            <span class="badge">JavaScript / React</span>
-            <span class="badge">AWS Cloud</span>
-            <span class="badge">SQL & NoSQL</span>
+        <div class="header-content">
+            <h1>Julia</h1>
+            <p class="subtitle">Software Engineer & AWS Cloud Practitioner</p>
+            <p class="bio">
+                Bacharelanda em Engenharia de Software (2024-2027). 
+                Especialista em transformar problemas complexos em sistemas escaláveis. 
+                Foco em <strong>C#, .NET e AWS Cloud</strong>. 
+                Atualmente aberta a novos desafios e melhores oportunidades no mercado global de tecnologia.
+            </p>
+            <div class="stack-badges">
+                <span class="badge">AWS Cloud</span>
+                <span class="badge">C# / .NET</span>
+                <span class="badge">Architecture Patterns</span>
+                <span class="badge">REST APIs</span>
+                <span class="badge">SQL/NoSQL</span>
+            </div>
         </div>
     </header>
 
     <main class="container">
+        
+        <section class="skills-grid">
+            <div class="skill-category">
+                <h4>Backend & Cloud</h4>
+                <p>C#, .NET Core, AWS Services (S3, EC2, Lambda), Web API.</p>
+            </div>
+            <div class="skill-category">
+                <h4>Frontend & Tools</h4>
+                <p>JavaScript, React, Git, Docker, CI/CD Basics.</p>
+            </div>
+            <div class="skill-category">
+                <h4>Professional</h4>
+                <p>Systems Analysis, Agile (Scrum), Clean Code, Tech Documentation.</p>
+            </div>
+        </section>
+
+        <section class="section-title">
+            <h2>Professional Experience</h2>
+        </section>
+        
+        <div class="experience-timeline">
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h3>Software Engineering Intern</h3>
+                    <span>2025 - Present</span>
+                </div>
+                <p class="exp-company">LabMov - Laboratório de Tecnologia</p>
+                <ul>
+                    <li>Liderança na atualização de interface para software de análise de dados de telas de pintura.</li>
+                    <li>Otimização de fluxos de leitura de dados, melhorando a precisão do processamento de informações.</li>
+                    <li>Aplicação de conceitos de Análise de Sistemas para refinamento de requisitos técnicos.</li>
+                </ul>
+            </div>
+        </div>
+
         <section class="section-title">
             <h2>Featured Projects</h2>
         </section>
+        
         <div class="grid" id="project-grid">
-            </div>
+            <article class="project-card">
+                <div class="project-visual-container">
+                    <img src="LINK_DA_IMAGEM_VALORECO" alt="Valoreco Preview" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h3>Valoreco</h3>
+                    <p>Ecossistema desenvolvido para [OBJETIVO DO PROJETO]. Focado em alta performance e escalabilidade.</p>
+                    <div class="project-tags">#FullStack #CSharp #Architecture</div>
+                    <div class="project-links">
+                        <a href="LINK_DO_PROJETO" class="btn-primary">Live Demo</a>
+                        <a href="LINK_DO_GITHUB" class="btn-secondary">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual-container">
+                    <div class="placeholder-visual">Cloud Architecture Diagram</div>
+                </div>
+                <div class="project-info">
+                    <h3>Cloud-Native Architecture</h3>
+                    <p>Projeto de infraestrutura utilizando serviços AWS para garantir alta disponibilidade e segurança.</p>
+                    <div class="project-tags">#AWS #CloudPractitioner #Infrastructure</div>
+                    <a href="LINK_DO_PROJETO" class="btn-secondary">View Case Study</a>
+                </div>
+            </article>
+        </div>
 
         <section class="section-title">
             <h2>Certifications & Education</h2>
         </section>
-        <div id="cert-list">
+        
+        <div class="cert-showcase">
+            <div class="cert-item highlight">
+                <img src="URL_DA_LOGO_AWS_OU_BADGE" alt="AWS Badge" class="badge-icon">
+                <div>
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p>Emissor: Amazon Web Services (AWS)</p>
+                    <a href="LINK_DA_SUA_BADGE_AQUI" class="verify-link">Verify Credential →</a>
+                </div>
             </div>
 
+            <div class="cert-item">
+                <div class="cert-icon-simple">🎓</div>
+                <div>
+                    <h3>B.S. in Software Engineering</h3>
+                    <p>Expected Graduation: Dec 2027</p>
+                    <p>Focus: Systems Analysis and Development</p>
+                </div>
+            </div>
+        </div>
+
         <section class="contact-section">
-            <h2>Vamos construir algo juntos?</h2>
+            <h2>Ready to build the future?</h2>
+            <p>Atualmente explorando novas tecnologias e oportunidades onde eu possa somar com minha expertise em Cloud e Engenharia de Software.</p>
             <div class="contact-links">
-                <a href="https://linkedin.com/in/juliaDemartini" target="_blank">LinkedIn</a>
-                <a href="https://github.com/juliaDemartini" target="_blank">GitHub</a>
-                <a href="mailto:seu-email@exemplo.com">E-mail</a>
+                <a href="https://linkedin.com/in/juliaDemartini" target="_blank" class="social-btn">LinkedIn</a>
+                <a href="https://github.com/juliaDemartini" target="_blank" class="social-btn">GitHub</a>
+                <a href="mailto:seu-email@exemplo.com" class="social-btn">E-mail</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Built with Code & Coffee • 2026</p>
+        <p>© 2026 • Julia • Desenvolvido com foco em Engenharia de Software</p>
     </footer>
 
     <script src="script.js"></script>
