@@ -193,6 +193,247 @@ footer {
     margin-top: 100px;
 }
 
+/* --- Seção de Core Competencies (Ícones) --- */
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.skills-group {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 25px;
+    transition: border-color 0.3s ease;
+}
+
+.skills-group:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.skills-group h3 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Pequena linha decorativa antes do título do grupo */
+.skills-group h3::before {
+    content: '';
+    width: 4px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 2.2rem; /* Tamanho otimizado para os ícones Devicon */
+    color: var(--text-secondary);
+}
+
+.skills-icons i {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: help;
+}
+
+/* Efeito de destaque: o ícone ganha a cor de destaque e "brilha" levemente */
+.skills-icons i:hover {
+    color: var(--accent);
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
+}
+
+/* Ajuste específico para o ícone colorido da AWS se você usou a classe .colored */
+.skills-icons .colored {
+    filter: grayscale(0.5);
+    opacity: 0.8;
+}
+
+.skills-icons .colored:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* --- Cloud Showcase Style --- */
+.cloud-showcase {
+    margin-bottom: 60px;
+}
+
+.cloud-card {
+    background: linear-gradient(135deg, var(--card-bg) 0%, #1e293b 100%);
+    border: 1px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+}
+
+.cloud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cloud-header i {
+    font-size: 4rem;
+}
+
+.badge-status {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.cloud-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    background: rgba(56, 189, 248, 0.05);
+}
+
+/* --- Education Style --- */
+.education-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.edu-item {
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.edu-item:hover {
+    transform: translateX(10px);
+    border-color: var(--accent);
+}
+
+.edu-date {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 0.9rem;
+    min-width: 100px;
+}
+
+.edu-institution {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.edu-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* --- CV Download Style --- */
+.cv-download-section {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.cv-card {
+    background: var(--card-bg);
+    border: 2px dashed var(--border); /* Estilo de 'anexo' */
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-card h3 {
+    margin-bottom: 15px;
+}
+
+.cv-card p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* --- Foto de Perfil no Header --- */
+
+.profile-photo {
+    width: 150px; /* Tamanho da foto */
+    height: 150px;
+    border-radius: 50%; /* Faz a foto ficar redonda */
+    object-fit: cover; /* Garante que a foto não distorça */
+    border: 4px solid var(--accent); /* Borda azul de destaque */
+    margin-bottom: 20px; /* Espaço entre a foto e o nome */
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); /* Brilho suave no azul */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito interativo ao passar o mouse na foto */
+.profile-photo:hover {
+    transform: scale(1.05); /* Aumenta levemente */
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.4); /* Aumenta o brilho */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        border-width: 3px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cloud-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .edu-item { flex-direction: column; gap: 10px; }
+    .cloud-links { flex-direction: column; }
+}
+
+/* Responsividade para os grupos de skills */
+@media (max-width: 768px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-icons {
+        gap: 15px;
+        font-size: 1.8rem;
+    }
+}
 /* Responsividade para telas menores */
 @media (max-width: 600px) {
     header h1 { font-size: 2.5rem; }
