@@ -37,15 +37,6 @@ Ao construir este portfólio, tomei decisões baseadas em boas práticas de merc
 
 ---
 
-## 📸 Preview Visual
-
-<div align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Preview+do+Portfolio+da+Julia" alt="Preview Portfolio Julia" width="800px">
-  <p><i>Desktop view do meu portfólio profissional em 2026.</i></p>
-</div>
-
----
-
 ## 🔗 Acesso Rápido
 
 - **Live Site:** [https://juliademartini.github.io/portfolio](https://juliademartini.github.io/portfolio)
