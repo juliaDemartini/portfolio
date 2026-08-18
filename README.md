@@ -1,10 +1,10 @@
-# 💻 Meu Portfólio Profissional | Julia - Software Engineer
+# Meu Portfólio Profissional | Julia - Software Engineer
 
 Este é o repositório do meu portfólio pessoal, projetado para apresentar minha trajetória na **Engenharia de Software**, minhas competências técnicas e minhas certificações em **Cloud Computing**.
 
 ---
 
-## 🚀 O que você encontrará aqui?
+## O que você encontrará aqui?
 
 O portfólio foi estruturado para fornecer uma visão 360º das minhas capacidades técnicas e acadêmicas:
 
@@ -16,7 +16,7 @@ O portfólio foi estruturado para fornecer uma visão 360º das minhas capacidad
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 Para manter o portfólio leve, performático e com foco em **Clean Code**, utilizei:
 
@@ -27,7 +27,7 @@ Para manter o portfólio leve, performático e com foco em **Clean Code**, utili
 
 ---
 
-## 📐 Decisões de Engenharia
+## Decisões de Engenharia
 
 Ao construir este portfólio, tomei decisões baseadas em boas práticas de mercado:
 
@@ -37,7 +37,7 @@ Ao construir este portfólio, tomei decisões baseadas em boas práticas de merc
 
 ---
 
-## 🔗 Acesso Rápido
+## Acesso Rápido
 
 - **Live Site:** [https://juliademartini.github.io/portfolio](https://juliademartini.github.io/portfolio)
 - **LinkedIn:** [https://linkedin.com/in/juliaDemartini](https://linkedin.com/in/juliaDemartini)
@@ -45,7 +45,7 @@ Ao construir este portfólio, tomei decisões baseadas em boas práticas de merc
 
 ---
 
-## 🔧 Como visualizar localmente
+## Como visualizar localmente
 
 ```bash
 # Clone o repositório
