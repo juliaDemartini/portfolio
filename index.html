@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Julia Demartini — Software Engineer</title>
 
     <meta
         name="description"
-        content="Portfólio de Julia Demartini — Engenharia de Software, desenvolvimento full stack e cloud."
-    >
-
-    <title>Julia Demartini | Software Engineer</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        content="Portfólio de Julia Demartini — Engenharia de Software, desenvolvimento, cloud, pesquisa e tecnologia."
     >
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones das tecnologias -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
 
-<!-- =========================================================
+<!-- =====================================================
      NAVBAR
-========================================================= -->
+===================================================== -->
 
 <header class="navbar">
 
@@ -41,171 +50,353 @@
     </a>
 
     <nav class="nav-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#formacao">Formação</a>
+
+        <a href="#sobre" data-pt="Sobre" data-en="About">
+            Sobre
+        </a>
+
+        <a href="#projetos" data-pt="Projetos" data-en="Projects">
+            Projetos
+        </a>
+
+        <a href="#experiencia" data-pt="Experiência" data-en="Experience">
+            Experiência
+        </a>
+
+        <a href="#formacao" data-pt="Formação" data-en="Education">
+            Formação
+        </a>
+
     </nav>
 
-    <a href="#contato" class="nav-contact">
-        Vamos conversar
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-    </a>
+    <div class="nav-actions">
+
+        <a
+            href="https://github.com/juliaDemartini"
+            target="_blank"
+            class="nav-github"
+        >
+            GitHub
+            <span>↗</span>
+        </a>
+
+        <button
+            class="language-button"
+            id="languageToggle"
+            aria-label="Alterar idioma"
+        >
+            <strong id="languageCurrent">PT</strong>
+            <span>/</span>
+            <span>EN</span>
+        </button>
+
+        <button
+            class="theme-button"
+            id="themeToggle"
+            aria-label="Alterar tema"
+        >
+            <span id="themeIcon">☾</span>
+        </button>
+
+    </div>
 
 </header>
 
 
 <main>
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
 <section class="hero" id="inicio">
 
-    <div class="hero-background">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-    </div>
+    <div class="hero-grid">
 
-    <div class="hero-content">
+        <!-- TEXTO -->
 
-        <div class="availability">
-            <span class="status-dot"></span>
-            Aberta a oportunidades em tecnologia
-        </div>
+        <div class="hero-text">
 
-        <p class="hero-eyebrow">
-            ENGENHARIA DE SOFTWARE · FULL STACK · CLOUD
-        </p>
+            <div class="hero-label">
+                SOFTWARE ENGINEERING
+                <span>•</span>
+                FULL STACK
+                <span>•</span>
+                CLOUD
+            </div>
 
-        <h1>
-            Transformando
-            <span>ideias</span>
-            em software.
-        </h1>
+            <h1>
+                Julia
+                <span>Demartini</span>
+            </h1>
 
-        <p class="hero-description">
-            Sou Julia Demartini, estudante de Engenharia de Software e
-            Análise e Desenvolvimento de Sistemas, com experiência em
-            desenvolvimento, pesquisa, automação e cloud.
-        </p>
-
-        <div class="hero-actions">
-
-            <a href="#projetos" class="btn btn-primary">
-                Explorar projetos
-                <span class="btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </span>
-            </a>
-
-            <a
-                href="https://github.com/juliaDemartini"
-                target="_blank"
-                class="btn btn-secondary"
+            <h2
+                data-pt="Engenharia de Software · Desenvolvedora Full Stack"
+                data-en="Software Engineering · Full Stack Developer"
             >
-                <i class="fa-brands fa-github"></i>
-                GitHub
-            </a>
+                Engenharia de Software · Desenvolvedora Full Stack
+            </h2>
+
+            <p
+                data-pt="Estudante de Engenharia de Software e Análise e Desenvolvimento de Sistemas, com experiência em desenvolvimento, pesquisa, automação e cloud."
+                data-en="Software Engineering and Systems Development student with experience in software development, research, automation and cloud."
+            >
+                Estudante de Engenharia de Software e Análise e
+                Desenvolvimento de Sistemas, com experiência em
+                desenvolvimento, pesquisa, automação e cloud.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projetos"
+                    class="button button-primary"
+                >
+                    <span
+                        data-pt="Ver projetos"
+                        data-en="View projects"
+                    >
+                        Ver projetos
+                    </span>
+
+                    <span class="button-icon">
+                        →
+                    </span>
+                </a>
+
+                <a
+                    href="https://github.com/juliaDemartini"
+                    target="_blank"
+                    class="button button-secondary"
+                >
+                    GitHub
+                    <span>↗</span>
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="hero-tech">
 
-            <span>C#</span>
-            <span>JavaScript</span>
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>AWS</span>
-            <span>SQL</span>
+        <!-- =================================================
+             CODE CARD
+        ================================================= -->
+
+        <div class="code-area">
+
+            <div class="code-orbit orbit-one">
+                <i class="devicon-react-original"></i>
+            </div>
+
+            <div class="code-orbit orbit-two">
+                <i class="devicon-javascript-plain"></i>
+            </div>
+
+            <div class="code-orbit orbit-three">
+                <i class="devicon-csharp-plain"></i>
+            </div>
+
+            <div class="code-orbit orbit-four">
+                <i class="devicon-amazonwebservices-plain-wordmark"></i>
+            </div>
+
+
+            <div class="code-window">
+
+                <div class="code-header">
+
+                    <div class="code-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="code-file">
+                        juliaDemartini.ts
+                    </div>
+
+                    <div class="code-status">
+                        ●
+                    </div>
+
+                </div>
+
+
+                <div class="code-body">
+
+<pre><code><span class="purple">const</span> <span class="cyan">julia</span> = {
+
+  <span class="pink">name</span>: <span class="green">"Julia Demartini"</span>,
+
+  <span class="pink">role</span>:
+    <span class="green">"Software Engineer"</span>,
+
+  <span class="pink">education</span>: [
+    <span class="green">"Software Engineering"</span>,
+    <span class="green">"ADS"</span>
+  ],
+
+  <span class="pink">technologies</span>: [
+    <span class="green">"C#"</span>,
+    <span class="green">"Java"</span>,
+    <span class="green">"React"</span>,
+    <span class="green">"JavaScript"</span>,
+    <span class="green">"SQL"</span>
+  ],
+
+  <span class="pink">cloud</span>: <span class="green">"AWS"</span>,
+
+  <span class="pink">currentlyBuilding</span>:
+    <span class="green">"real-world solutions"</span>
+
+};</code></pre>
+
+                </div>
+
+
+                <div class="code-footer">
+
+                    <span>
+                        <i></i>
+                        online
+                    </span>
+
+                    <span>
+                        TypeScript
+                    </span>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
 
-    <div class="hero-scroll">
-        <span>SCROLL</span>
-        <div class="scroll-line"></div>
+    <!-- STACK -->
+
+    <div class="floating-stack">
+
+        <div class="tech-item">
+            <i class="devicon-csharp-plain"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-java-plain"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-javascript-plain"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-typescript-plain"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-react-original"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-nodejs-plain"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-mysql-original"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-git-plain"></i>
+        </div>
+
+        <div class="tech-item">
+            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+        </div>
+
     </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      SOBRE
-========================================================= -->
+===================================================== -->
 
-<section class="section about-section" id="sobre">
+<section class="section about" id="sobre">
 
-    <div class="section-label">
+    <div class="section-heading">
+
         <span>01</span>
-        SOBRE MIM
-    </div>
 
-    <div class="about-grid">
+        <div>
+            <small
+                data-pt="Sobre mim"
+                data-en="About me"
+            >
+                Sobre mim
+            </small>
 
-        <div class="about-intro">
-
-            <p class="small-title">
-                Engenharia + curiosidade + construção
-            </p>
-
-            <h2>
-                Gosto de entender
-                <span>como as coisas funcionam.</span>
+            <h2
+                data-pt="Construindo repertório através de experiências reais."
+                data-en="Building experience through real-world challenges."
+            >
+                Construindo repertório através
+                de experiências reais.
             </h2>
-
         </div>
 
+    </div>
+
+
+    <div class="about-grid">
 
         <div class="about-text">
 
             <p>
-                Minha formação em Engenharia de Software vem sendo construída
-                junto à prática. Gosto de transformar problemas em soluções
-                funcionais, entender a estrutura por trás de uma aplicação
-                e buscar formas melhores de construir software.
+                Minha formação combina Engenharia de Software e
+                Análise e Desenvolvimento de Sistemas, permitindo
+                explorar diferentes perspectivas da construção de
+                software.
             </p>
 
             <p>
-                Minha experiência passa por desenvolvimento de interfaces,
-                visualização de dados científicos, automação, bancos de
-                dados, eletrônica e desenvolvimento de aplicações.
+                Ao longo dessa jornada, participei de projetos de
+                desenvolvimento, pesquisa científica, automação,
+                robótica e tecnologia em ambientes institucionais.
             </p>
 
             <p>
-                Atualmente, meu foco está em evoluir como desenvolvedora
-                de software, aprofundando conhecimentos em desenvolvimento
-                full stack, arquitetura e cloud.
+                Gosto especialmente de entender um problema,
+                estruturar uma solução e transformar essa ideia
+                em algo que possa ser utilizado na prática.
             </p>
 
         </div>
 
-    </div>
 
+        <div class="about-facts">
 
-    <div class="about-highlights">
+            <div class="fact">
+                <strong>02</strong>
+                <span>formações em tecnologia</span>
+            </div>
 
-        <div class="highlight">
-            <strong>01</strong>
-            <span>Desenvolvimento de software</span>
-        </div>
+            <div class="fact">
+                <strong>03</strong>
+                <span>experiências profissionais</span>
+            </div>
 
-        <div class="highlight">
-            <strong>02</strong>
-            <span>Cloud & arquitetura</span>
-        </div>
+            <div class="fact">
+                <strong>AWS</strong>
+                <span>Cloud Practitioner</span>
+            </div>
 
-        <div class="highlight">
-            <strong>03</strong>
-            <span>Pesquisa & inovação</span>
-        </div>
+            <div class="fact">
+                <strong>∞</strong>
+                <span>curiosidade para aprender</span>
+            </div>
 
-        <div class="highlight">
-            <strong>04</strong>
-            <span>Aprendizado contínuo</span>
         </div>
 
     </div>
@@ -213,28 +404,308 @@
 </section>
 
 
-<!-- =========================================================
-     EXPERIÊNCIA
-========================================================= -->
+<!-- =====================================================
+     PROJETOS — DESTAQUE
+===================================================== -->
 
-<section class="section experience-section" id="experiencia">
-
-    <div class="section-label">
-        <span>02</span>
-        EXPERIÊNCIA
-    </div>
+<section class="section projects-section" id="projetos">
 
     <div class="section-heading">
 
-        <h2>
-            Experiências que
-            <span>viraram repertório.</span>
-        </h2>
+        <span>02</span>
 
-        <p>
-            Desenvolvimento, pesquisa, automação e resolução de problemas
-            em diferentes contextos.
-        </p>
+        <div>
+
+            <small
+                data-pt="Projetos em destaque"
+                data-en="Featured projects"
+            >
+                Projetos em destaque
+            </small>
+
+            <h2
+                data-pt="Onde ideias viraram software."
+                data-en="Where ideas became software."
+            >
+                Onde ideias viraram software.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJETO 1 -->
+
+    <article
+        class="project-card project-main"
+        data-project="dna"
+    >
+
+        <div class="project-image">
+
+            <!-- SUBSTITUA PELA SUA IMAGEM -->
+
+            <img
+                src="assets/projects/dna-cover.jpg"
+                alt="Projeto DNA"
+            >
+
+            <div class="project-overlay">
+                <span>Ver projeto</span>
+                <strong>→</strong>
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+            <div class="project-number">
+                01
+            </div>
+
+            <h3>
+                DNA Jeanswear
+            </h3>
+
+            <p>
+                E-commerce de jeanswear com foco em experiência
+                digital, personalização e recursos tecnológicos.
+            </p>
+
+
+            <div class="project-tech">
+
+                <i class="devicon-csharp-plain"></i>
+
+                <i class="devicon-react-original"></i>
+
+                <i class="devicon-javascript-plain"></i>
+
+                <i class="devicon-amazonwebservices-plain-wordmark"></i>
+
+            </div>
+
+
+            <button class="project-open">
+                Explorar projeto
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- PROJETO 2 -->
+
+    <article
+        class="project-card"
+        data-project="valoreco"
+    >
+
+        <div class="project-image">
+
+            <img
+                src="assets/projects/valoreco-cover.jpg"
+                alt="Projeto ValorEco"
+            >
+
+            <div class="project-overlay">
+                <span>Ver projeto</span>
+                <strong>→</strong>
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+            <div class="project-number">
+                02
+            </div>
+
+            <h3>
+                ValorEco
+            </h3>
+
+            <p>
+                Sistema de incentivo à reciclagem integrando
+                software, hardware e automação.
+            </p>
+
+
+            <div class="project-tech">
+
+                <i class="devicon-arduino-plain"></i>
+
+                <i class="devicon-javascript-plain"></i>
+
+                <i class="devicon-react-original"></i>
+
+            </div>
+
+
+            <button class="project-open">
+                Explorar projeto
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- PROJETO 3 -->
+
+    <article
+        class="project-card"
+        data-project="foodexpress"
+    >
+
+        <div class="project-image">
+
+            <img
+                src="assets/projects/foodexpress-cover.jpg"
+                alt="FoodExpress"
+            >
+
+            <div class="project-overlay">
+                <span>Ver projeto</span>
+                <strong>→</strong>
+            </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+            <div class="project-number">
+                03
+            </div>
+
+            <h3>
+                FoodExpress
+            </h3>
+
+            <p>
+                Aplicação web construída para explorar conceitos
+                de desenvolvimento full stack.
+            </p>
+
+
+            <div class="project-tech">
+
+                <i class="devicon-html5-plain"></i>
+
+                <i class="devicon-css3-plain"></i>
+
+                <i class="devicon-javascript-plain"></i>
+
+            </div>
+
+
+            <button class="project-open">
+                Explorar projeto
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- OUTROS -->
+
+    <div class="other-projects">
+
+        <a
+            href="https://github.com/juliaDemartini"
+            target="_blank"
+        >
+            <span>Ver mais projetos no GitHub</span>
+            <strong>↗</strong>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CERTIFICAÇÃO
+===================================================== -->
+
+<section class="certification-section">
+
+    <div class="certification-content">
+
+        <div class="certification-icon">
+
+            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+
+        </div>
+
+
+        <div>
+
+            <span class="certification-label">
+                CERTIFICAÇÃO
+            </span>
+
+            <h2>
+                AWS Certified
+                <strong>Cloud Practitioner</strong>
+            </h2>
+
+            <p>
+                Certificação em fundamentos de cloud,
+                serviços AWS, segurança, arquitetura,
+                custos e conceitos essenciais da computação
+                em nuvem.
+            </p>
+
+        </div>
+
+
+        <div class="certification-year">
+            2025
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIÊNCIA
+===================================================== -->
+
+<section class="section experience-section" id="experiencia">
+
+    <div class="section-heading">
+
+        <span>03</span>
+
+        <div>
+
+            <small
+                data-pt="Experiência"
+                data-en="Experience"
+            >
+                Experiência
+            </small>
+
+            <h2
+                data-pt="Aprendizado aplicado em diferentes contextos."
+                data-en="Applied learning across different contexts."
+            >
+                Aprendizado aplicado em
+                diferentes contextos.
+            </h2>
+
+        </div>
 
     </div>
 
@@ -244,49 +715,42 @@
 
         <!-- EXPERIÊNCIA 1 -->
 
-        <article class="experience-item">
+        <article class="timeline-item">
 
-            <div class="experience-date">
+            <div class="timeline-date">
                 2025 — 2026
             </div>
 
-            <div class="experience-marker"></div>
+            <div class="timeline-content">
 
-            <div class="experience-content">
+                <span class="experience-type">
+                    BOLSISTA DE PESQUISA
+                </span>
 
-                <div class="experience-top">
+                <h3>
+                    Desenvolvedora de Software
+                </h3>
 
-                    <div>
-                        <h3>
-                            Desenvolvedora de Software
-                        </h3>
-
-                        <p class="company">
-                            Bolsista de Pesquisa · FAPERJ – IFRJ / Lab.Mov
-                        </p>
-                    </div>
-
-                    <span class="experience-number">
-                        01
-                    </span>
-
-                </div>
+                <h4>
+                    FAPERJ · IFRJ / Lab.Mov
+                </h4>
 
                 <ul>
 
                     <li>
-                        Desenvolvimento e atualização de interfaces de
-                        usuário em C#, com foco em usabilidade e experiência.
+                        Desenvolvimento e atualização de
+                        interfaces de usuário em C#.
                     </li>
 
                     <li>
-                        Implementação de visualização de dados hiperespectrais
-                        para investigação científica e forense.
+                        Implementação de visualização de dados
+                        hiperespectrais para investigação científica
+                        e forense.
                     </li>
 
                     <li>
-                        Refatoração de módulos de UI/UX utilizando princípios
-                        de design centrado no usuário.
+                        Refatoração de módulos de UI/UX com
+                        princípios de design centrado no usuário.
                     </li>
 
                     <li>
@@ -295,13 +759,6 @@
 
                 </ul>
 
-                <div class="tags">
-                    <span>C#</span>
-                    <span>UI/UX</span>
-                    <span>Pesquisa</span>
-                    <span>Automação</span>
-                </div>
-
             </div>
 
         </article>
@@ -309,63 +766,48 @@
 
         <!-- EXPERIÊNCIA 2 -->
 
-        <article class="experience-item">
+        <article class="timeline-item">
 
-            <div class="experience-date">
+            <div class="timeline-date">
                 2023 — 2024
             </div>
 
-            <div class="experience-marker"></div>
+            <div class="timeline-content">
 
-            <div class="experience-content">
+                <span class="experience-type">
+                    PESQUISA · ROBÓTICA
+                </span>
 
-                <div class="experience-top">
+                <h3>
+                    Bolsista de Pesquisa
+                </h3>
 
-                    <div>
-                        <h3>
-                            Bolsista de Pesquisa
-                        </h3>
-
-                        <p class="company">
-                            Robótica Educacional · FAPERJ – ETE Paracambi
-                        </p>
-                    </div>
-
-                    <span class="experience-number">
-                        02
-                    </span>
-
-                </div>
+                <h4>
+                    FAPERJ · ETE Paracambi
+                </h4>
 
                 <ul>
 
                     <li>
-                        Desenvolvimento de protótipo funcional completo
-                        de sistema robótico educacional.
+                        Desenvolvimento de protótipo funcional
+                        completo de sistema robótico educacional.
                     </li>
 
                     <li>
-                        Programação de microcontroladores Arduino e
-                        integração de múltiplos sensores.
+                        Programação de microcontroladores Arduino
+                        com múltiplos sensores.
                     </li>
 
                     <li>
-                        Colaboração em equipe multidisciplinar e documentação
-                        técnica.
+                        Colaboração em equipe multidisciplinar.
                     </li>
 
                     <li>
-                        Apresentação de resultados e elaboração de relatórios.
+                        Documentação técnica e apresentação
+                        dos resultados.
                     </li>
 
                 </ul>
-
-                <div class="tags">
-                    <span>Arduino</span>
-                    <span>Automação</span>
-                    <span>Sensores</span>
-                    <span>Prototipação</span>
-                </div>
 
             </div>
 
@@ -374,39 +816,31 @@
 
         <!-- EXPERIÊNCIA 3 -->
 
-        <article class="experience-item">
+        <article class="timeline-item">
 
-            <div class="experience-date">
+            <div class="timeline-date">
                 2024 — 2025
             </div>
 
-            <div class="experience-marker"></div>
+            <div class="timeline-content">
 
-            <div class="experience-content">
+                <span class="experience-type">
+                    ESTÁGIO
+                </span>
 
-                <div class="experience-top">
+                <h3>
+                    Estagiária
+                </h3>
 
-                    <div>
-                        <h3>
-                            Estagiária
-                        </h3>
-
-                        <p class="company">
-                            Caixa Econômica Federal
-                        </p>
-                    </div>
-
-                    <span class="experience-number">
-                        03
-                    </span>
-
-                </div>
+                <h4>
+                    Caixa Econômica Federal
+                </h4>
 
                 <ul>
 
                     <li>
-                        Gerenciamento e manutenção de bancos de dados
-                        institucionais.
+                        Gerenciamento e manutenção de
+                        bancos de dados institucionais.
                     </li>
 
                     <li>
@@ -414,21 +848,11 @@
                     </li>
 
                     <li>
-                        Organização de informações e processos internos.
-                    </li>
-
-                    <li>
-                        Atendimento ao público e resolução de problemas.
+                        Atendimento e resolução de problemas.
                     </li>
 
                 </ul>
 
-                <div class="tags">
-                    <span>Banco de dados</span>
-                    <span>Processos</span>
-                    <span>Dados</span>
-                </div>
-
             </div>
 
         </article>
@@ -438,498 +862,110 @@
 </section>
 
 
-<!-- =========================================================
-     PROJETOS
-========================================================= -->
-
-<section class="section projects-section" id="projetos">
-
-    <div class="section-label">
-        <span>03</span>
-        PROJETOS
-    </div>
-
-
-    <div class="section-heading projects-heading">
-
-        <div>
-
-            <h2>
-                Projetos que mostram
-                <span>como eu penso.</span>
-            </h2>
-
-        </div>
-
-        <p>
-            Mais do que telas bonitas: decisões, arquitetura, requisitos,
-            implementação e aprendizados.
-        </p>
-
-    </div>
-
-
-    <div class="projects-list">
-
-
-        <!-- =====================================================
-             PROJETO DNA
-        ====================================================== -->
-
-        <article
-            class="project-card featured"
-            data-project="dna"
-        >
-
-            <div class="project-image">
-
-                <!-- TROQUE PELO PRINT DO PROJETO -->
-
-                <img
-                    src="assets/projeto-dna/capa.png"
-                    alt="Projeto DNA"
-                    onerror="this.style.display='none'"
-                >
-
-                <div class="image-placeholder">
-                    <span>DNA</span>
-                    <small>adicione sua imagem em<br>assets/projeto-dna/capa.png</small>
-                </div>
-
-                <div class="project-overlay"></div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div class="project-meta">
-                    <span>01</span>
-                    <span>FULL STACK · E-COMMERCE</span>
-                </div>
-
-                <h3>
-                    DNA Jeanswear
-                </h3>
-
-                <p>
-                    Experiência de e-commerce com foco em tecnologia,
-                    personalização e experiência de compra.
-                </p>
-
-                <div class="tags">
-                    <span>C#</span>
-                    <span>API</span>
-                    <span>JavaScript</span>
-                    <span>UX</span>
-                </div>
-
-
-                <button class="project-open">
-
-                    Ver case completo
-
-                    <span class="circle-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- =====================================================
-             FOOD EXPRESS
-        ====================================================== -->
-
-        <article
-            class="project-card"
-            data-project="foodexpress"
-        >
-
-            <div class="project-image">
-
-                <img
-                    src="assets/foodexpress/capa.png"
-                    alt="FoodExpress"
-                    onerror="this.style.display='none'"
-                >
-
-                <div class="image-placeholder">
-                    <span>FOOD<br>EXPRESS</span>
-                    <small>adicione sua imagem</small>
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div class="project-meta">
-                    <span>02</span>
-                    <span>WEB APPLICATION</span>
-                </div>
-
-                <h3>
-                    FoodExpress
-                </h3>
-
-                <p>
-                    Aplicação desenvolvida para explorar conceitos de
-                    desenvolvimento web e experiência de usuário.
-                </p>
-
-                <div class="tags">
-                    <span>JavaScript</span>
-                    <span>Web</span>
-                    <span>API</span>
-                </div>
-
-                <button class="project-open">
-
-                    Ver case completo
-
-                    <span class="circle-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- =====================================================
-             VALORECO
-        ====================================================== -->
-
-        <article
-            class="project-card"
-            data-project="valoreco"
-        >
-
-            <div class="project-image">
-
-                <img
-                    src="assets/valoreco/capa.png"
-                    alt="ValorEco"
-                    onerror="this.style.display='none'"
-                >
-
-                <div class="image-placeholder">
-                    <span>VALORECO</span>
-                    <small>adicione sua imagem</small>
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div class="project-meta">
-                    <span>03</span>
-                    <span>IOT · HARDWARE</span>
-                </div>
-
-                <h3>
-                    ValorEco
-                </h3>
-
-                <p>
-                    Solução de reciclagem inteligente combinando hardware,
-                    sensores, software e sistema de recompensas.
-                </p>
-
-                <div class="tags">
-                    <span>Arduino</span>
-                    <span>IoT</span>
-                    <span>Software</span>
-                </div>
-
-                <button class="project-open">
-
-                    Ver case completo
-
-                    <span class="circle-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- =====================================================
-             STORYFOX
-        ====================================================== -->
-
-        <article
-            class="project-card"
-            data-project="storyfox"
-        >
-
-            <div class="project-image">
-
-                <img
-                    src="assets/storyfox/capa.png"
-                    alt="StoryFox"
-                    onerror="this.style.display='none'"
-                >
-
-                <div class="image-placeholder">
-                    <span>STORYFOX</span>
-                    <small>adicione sua imagem</small>
-                </div>
-
-            </div>
-
-
-            <div class="project-info">
-
-                <div class="project-meta">
-                    <span>04</span>
-                    <span>SAAS · AI · AUTOMATION</span>
-                </div>
-
-                <h3>
-                    StoryFox
-                </h3>
-
-                <p>
-                    Conceito de SaaS para automação de conteúdo e gestão
-                    de interações utilizando inteligência artificial.
-                </p>
-
-                <div class="tags">
-                    <span>Node.js</span>
-                    <span>Firebase</span>
-                    <span>AI</span>
-                </div>
-
-                <button class="project-open">
-
-                    Ver case completo
-
-                    <span class="circle-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </button>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SKILLS
-========================================================= -->
-
-<section class="section skills-section">
-
-    <div class="section-label">
-        <span>04</span>
-        TECNOLOGIAS
-    </div>
-
-
-    <div class="skills-layout">
-
-        <div>
-
-            <h2>
-                Ferramentas que
-                <span>fazem parte da jornada.</span>
-            </h2>
-
-            <p class="skills-description">
-                Tecnologias que venho utilizando em projetos acadêmicos,
-                profissionais e pessoais.
-            </p>
-
-        </div>
-
-
-        <div class="skills-cloud">
-
-            <span class="skill-large">C#</span>
-            <span>JavaScript</span>
-            <span>TypeScript</span>
-            <span class="skill-large">React</span>
-            <span>Node.js</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>SQL</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>AWS</span>
-            <span>Arduino</span>
-            <span>Java</span>
-            <span>Python</span>
-            <span>Firebase</span>
-            <span>REST API</span>
-
-        </div>
-
-    </div>
-
-
-    <div class="certifications">
-
-        <div class="certification">
-
-            <span class="cert-icon">
-                <i class="fa-brands fa-aws"></i>
-            </span>
-
-            <div>
-                <strong>
-                    AWS Certified Cloud Practitioner
-                </strong>
-
-                <small>
-                    CLF-C02 · Amazon Web Services · 2025
-                </small>
-            </div>
-
-        </div>
-
-
-        <div class="certification">
-
-            <span class="cert-icon">
-                <i class="fa-solid fa-cloud"></i>
-            </span>
-
-            <div>
-                <strong>
-                    AWS re/Start + Inteligência Artificial
-                </strong>
-
-                <small>
-                    Escola da Nuvem · 2025
-                </small>
-            </div>
-
-        </div>
-
-
-        <div class="certification">
-
-            <span class="cert-icon">
-                <i class="fa-solid fa-code"></i>
-            </span>
-
-            <div>
-                <strong>
-                    Trilha AWS Developer
-                </strong>
-
-                <small>
-                    Escola da Nuvem · 2026
-                </small>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =====================================================
      FORMAÇÃO
-========================================================= -->
+===================================================== -->
 
 <section class="section education-section" id="formacao">
 
-    <div class="section-label">
-        <span>05</span>
-        FORMAÇÃO
+    <div class="section-heading">
+
+        <span>04</span>
+
+        <div>
+
+            <small
+                data-pt="Formação"
+                data-en="Education"
+            >
+                Formação
+            </small>
+
+            <h2>
+                Formação acadêmica
+                & certificações.
+            </h2>
+
+        </div>
+
     </div>
 
 
     <div class="education-grid">
 
+        <div class="education-column">
 
-        <div class="education-card">
-
-            <span class="education-year">
-                2024 — DEZ/2027
+            <span class="education-label">
+                GRADUAÇÃO
             </span>
 
-            <div class="education-icon">
-                <i class="fa-solid fa-graduation-cap"></i>
+            <div class="education-item">
+
+                <span>2024 — 2027</span>
+
+                <h3>
+                    Bacharelado em Engenharia de Software
+                </h3>
+
+                <p>
+                    Universidade Estácio de Sá
+                </p>
+
             </div>
 
-            <h3>
-                Bacharelado em
-                Engenharia de Software
-            </h3>
 
-            <p>
-                Universidade Estácio de Sá
-            </p>
+            <div class="education-item">
 
-            <span class="education-status">
-                Em andamento
-            </span>
+                <span>2024 — 2027</span>
+
+                <h3>
+                    Tecnólogo em Análise e
+                    Desenvolvimento de Sistemas
+                </h3>
+
+                <p>
+                    FAETERJ Paracambi
+                </p>
+
+            </div>
 
         </div>
 
 
-        <div class="education-card">
+        <div class="education-column">
 
-            <span class="education-year">
-                2024 — JUL/2027
+            <span class="education-label">
+                CERTIFICAÇÕES & CURSOS
             </span>
 
-            <div class="education-icon">
-                <i class="fa-solid fa-laptop-code"></i>
+            <div class="cert-list">
+
+                <div>
+                    <strong>AWS Certified Cloud Practitioner</strong>
+                    <span>Amazon Web Services · 2025</span>
+                </div>
+
+                <div>
+                    <strong>AWS re/Start + Inteligência Artificial</strong>
+                    <span>Escola da Nuvem · 2025</span>
+                </div>
+
+                <div>
+                    <strong>Trilha AWS Developer</strong>
+                    <span>Escola da Nuvem · 2026</span>
+                </div>
+
+                <div>
+                    <strong>Projeto de Eletrônica e Automação com Arduino</strong>
+                    <span>FAETEC EAD · 2026</span>
+                </div>
+
+                <div>
+                    <strong>Curso Técnico em Informática</strong>
+                    <span>ETE Paracambi · 2024</span>
+                </div>
+
             </div>
-
-            <h3>
-                Tecnólogo em
-                Análise e Desenvolvimento
-                de Sistemas
-            </h3>
-
-            <p>
-                FAETERJ Paracambi
-            </p>
-
-            <span class="education-status">
-                Em andamento
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="additional-courses">
-
-        <h3>
-            Outros conhecimentos
-        </h3>
-
-        <div class="course-list">
-
-            <span>Arduino & Automação</span>
-            <span>Informática</span>
-            <span>Modelagem 3D para Jogos</span>
-            <span>Marketing</span>
-            <span>Design Gráfico</span>
-            <span>Excel</span>
 
         </div>
 
@@ -938,108 +974,59 @@
 </section>
 
 
-<!-- =========================================================
-     IDIOMAS
-========================================================= -->
+<!-- =====================================================
+     TECNOLOGIAS
+===================================================== -->
 
-<section class="languages-section">
+<section class="technologies-section">
 
-    <div class="language">
-
-        <strong>
-            Português
-        </strong>
+    <div class="technologies-title">
 
         <span>
-            Nativo
+            STACK
         </span>
-
-    </div>
-
-    <div class="language">
-
-        <strong>
-            Espanhol
-        </strong>
-
-        <span>
-            Básico · A2
-        </span>
-
-    </div>
-
-    <div class="language">
-
-        <strong>
-            Inglês
-        </strong>
-
-        <span>
-            Básico · A1 · em desenvolvimento
-        </span>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CONTATO
-========================================================= -->
-
-<section class="contact-section" id="contato">
-
-    <div class="contact-glow"></div>
-
-    <div class="section-label">
-        <span>06</span>
-        CONTATO
-    </div>
-
-
-    <div class="contact-content">
-
-        <p>
-            Vamos construir
-            <span>algo interessante?</span>
-        </p>
 
         <h2>
-            Estou sempre aberta
-            a aprender algo novo.
+            Ferramentas que fazem
+            parte da jornada.
         </h2>
 
-
-        <div class="contact-links">
-
-            <a
-                href="https://www.linkedin.com/in/juliademartini/"
-                target="_blank"
-            >
-                <i class="fa-brands fa-linkedin-in"></i>
-                LinkedIn
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+    </div>
 
 
-            <a
-                href="https://github.com/juliaDemartini"
-                target="_blank"
-            >
-                <i class="fa-brands fa-github"></i>
-                GitHub
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+    <div class="tech-marquee">
 
+        <div class="tech-track">
 
-            <a
-                href="https://juliademartini.github.io/portfolio/"
-                target="_blank"
-            >
-                <i class="fa-solid fa-globe"></i>
-                Portfolio
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+            <i class="devicon-csharp-plain"></i>
+            <i class="devicon-java-plain"></i>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-typescript-plain"></i>
+            <i class="devicon-react-original"></i>
+            <i class="devicon-nodejs-plain"></i>
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-css3-plain"></i>
+            <i class="devicon-mysql-original"></i>
+            <i class="devicon-git-plain"></i>
+            <i class="devicon-github-original"></i>
+            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+            <i class="devicon-arduino-plain"></i>
+
+            <!-- repetição -->
+
+            <i class="devicon-csharp-plain"></i>
+            <i class="devicon-java-plain"></i>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-typescript-plain"></i>
+            <i class="devicon-react-original"></i>
+            <i class="devicon-nodejs-plain"></i>
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-css3-plain"></i>
+            <i class="devicon-mysql-original"></i>
+            <i class="devicon-git-plain"></i>
+            <i class="devicon-github-original"></i>
+            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+            <i class="devicon-arduino-plain"></i>
 
         </div>
 
@@ -1047,404 +1034,388 @@
 
 </section>
 
-</main>
 
+<!-- =====================================================
+     IDIOMAS
+===================================================== -->
 
-<!-- =========================================================
-     MODAL / CASE STUDY
-========================================================= -->
+<section class="section languages-section">
 
-<div class="case-modal" id="caseModal">
+    <div class="languages-content">
 
-    <div class="case-overlay"></div>
+        <span>
+            IDIOMAS
+        </span>
 
-    <div class="case-container">
-
-        <button class="case-close" id="caseClose">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-
-        <div class="case-header">
+        <div class="languages">
 
             <div>
-
-                <span id="caseCategory">
-                    FULL STACK
-                </span>
-
-                <h2 id="caseTitle">
-                    Projeto
-                </h2>
-
-                <p id="caseSubtitle">
-                    Descrição do projeto
-                </p>
-
+                <strong>Português</strong>
+                <small>Nativo</small>
             </div>
 
-            <div class="case-number" id="caseNumber">
-                01
+            <div>
+                <strong>Español</strong>
+                <small>A2 · Básico</small>
+            </div>
+
+            <div>
+                <strong>English</strong>
+                <small>A1 · Em desenvolvimento</small>
             </div>
 
         </div>
 
-
-        <!-- IMAGENS -->
-
-        <section class="case-section">
-
-            <div class="case-section-title">
-
-                <span>01</span>
-
-                <h3>
-                    Visão geral
-                </h3>
-
-            </div>
-
-
-            <div class="case-gallery">
-
-                <div class="gallery-main">
-
-                    <img
-                        id="caseImage1"
-                        src=""
-                        alt="Imagem principal do projeto"
-                    >
-
-                    <div class="gallery-placeholder">
-                        <i class="fa-regular fa-image"></i>
-
-                        <span>
-                            Imagem principal
-                        </span>
-
-                        <small>
-                            coloque sua imagem aqui
-                        </small>
-                    </div>
-
-                </div>
-
-
-                <div class="gallery-side">
-
-                    <div class="gallery-small">
-
-                        <img
-                            id="caseImage2"
-                            src=""
-                            alt=""
-                        >
-
-                        <div class="gallery-placeholder">
-                            <i class="fa-regular fa-image"></i>
-                            <span>Imagem 02</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="gallery-small">
-
-                        <img
-                            id="caseImage3"
-                            src=""
-                            alt=""
-                        >
-
-                        <div class="gallery-placeholder">
-                            <i class="fa-regular fa-image"></i>
-                            <span>Imagem 03</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTEXTO -->
-
-        <section class="case-section case-two-columns">
-
-            <div>
-
-                <div class="case-section-title">
-                    <span>02</span>
-                    <h3>Contexto</h3>
-                </div>
-
-                <p id="caseContext">
-                    Descreva aqui o contexto do projeto.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <div class="case-section-title">
-                    <span>03</span>
-                    <h3>Objetivo</h3>
-                </div>
-
-                <p id="caseObjective">
-                    Descreva aqui o objetivo.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROBLEMA -->
-
-        <section class="case-highlight">
-
-            <span>
-                PROBLEMA
-            </span>
-
-            <h3 id="caseProblem">
-                Qual problema o projeto buscava resolver?
-            </h3>
-
-        </section>
-
-
-        <!-- FUNCIONALIDADES -->
-
-        <section class="case-section">
-
-            <div class="case-section-title">
-
-                <span>04</span>
-
-                <h3>
-                    Funcionalidades
-                </h3>
-
-            </div>
-
-
-            <div
-                class="feature-grid"
-                id="caseFeatures"
-            >
-
-                <!-- preenchido pelo JS -->
-
-            </div>
-
-        </section>
-
-
-        <!-- REQUISITOS -->
-
-        <section class="case-section">
-
-            <div class="case-section-title">
-
-                <span>05</span>
-
-                <h3>
-                    Requisitos
-                </h3>
-
-            </div>
-
-
-            <div class="requirements-grid">
-
-                <div class="requirement-box">
-
-                    <h4>
-                        Requisitos funcionais
-                    </h4>
-
-                    <ul id="functionalRequirements">
-
-                    </ul>
-
-                </div>
-
-
-                <div class="requirement-box">
-
-                    <h4>
-                        Requisitos não funcionais
-                    </h4>
-
-                    <ul id="nonFunctionalRequirements">
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- TECNOLOGIAS -->
-
-        <section class="case-section">
-
-            <div class="case-section-title">
-
-                <span>06</span>
-
-                <h3>
-                    Stack & arquitetura
-                </h3>
-
-            </div>
-
-
-            <div
-                class="case-stack"
-                id="caseStack"
-            >
-
-            </div>
-
-        </section>
-
-
-        <!-- MÉTODO -->
-
-        <section class="case-section case-two-columns">
-
-            <div>
-
-                <div class="case-section-title">
-
-                    <span>07</span>
-
-                    <h3>
-                        Processo
-                    </h3>
-
-                </div>
-
-                <p id="caseProcess">
-                    Descreva aqui como você trabalhou no projeto,
-                    desde a ideia até a implementação.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <div class="case-section-title">
-
-                    <span>08</span>
-
-                    <h3>
-                        Desafios
-                    </h3>
-
-                </div>
-
-                <p id="caseChallenges">
-                    Descreva aqui os principais desafios.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- APRENDIZADOS -->
-
-        <section class="case-highlight learning">
-
-            <span>
-                APRENDIZADOS
-            </span>
-
-            <h3 id="caseLearning">
-                O que este projeto me ensinou?
-            </h3>
-
-        </section>
-
-
-        <!-- LINKS -->
-
-        <section class="case-links-section">
-
-            <a
-                id="caseGithub"
-                href="#"
-                target="_blank"
-                class="case-link"
-            >
-
-                <i class="fa-brands fa-github"></i>
-
-                <span>
-                    Código no GitHub
-                </span>
-
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-            </a>
-
-
-            <a
-                id="caseDemo"
-                href="#"
-                target="_blank"
-                class="case-link primary"
-            >
-
-                <i class="fa-solid fa-globe"></i>
-
-                <span>
-                    Ver projeto funcionando
-                </span>
-
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-            </a>
-
-        </section>
-
     </div>
 
-</div>
+</section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
-    <div class="footer-logo">
+    <div class="footer-brand">
         JD<span>.</span>
     </div>
 
     <p>
-        © 2026 Julia Demartini.
-        Desenvolvido com curiosidade e código.
+        Julia Demartini · Software Engineering
     </p>
 
-    <a href="#inicio">
-        Voltar ao topo
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
+    <div class="footer-links">
+
+        <a
+            href="https://github.com/juliaDemartini"
+            target="_blank"
+        >
+            GitHub ↗
+        </a>
+
+        <a
+            href="https://www.linkedin.com/in/juliademartini/"
+            target="_blank"
+        >
+            LinkedIn ↗
+        </a>
+
+    </div>
 
 </footer>
+
+</main>
+
+
+<!-- =====================================================
+     MODAL DE PROJETO
+===================================================== -->
+
+<div
+    class="project-modal"
+    id="projectModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-overlay"></div>
+
+
+    <div class="modal-container">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+            aria-label="Fechar projeto"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-scroll">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="modal-header">
+
+                <span id="modalNumber">
+                    01
+                </span>
+
+                <div>
+
+                    <small id="modalCategory">
+                        PROJETO
+                    </small>
+
+                    <h2 id="modalTitle">
+                        DNA Jeanswear
+                    </h2>
+
+                    <p id="modalDescription">
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- GALERIA -->
+
+            <div class="project-gallery">
+
+                <div class="gallery-main">
+
+                    <img
+                        id="modalMainImage"
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <div class="gallery-thumbnails">
+
+                    <button>
+                        <img
+                            src="assets/projects/dna-01.jpg"
+                            alt=""
+                        >
+                    </button>
+
+                    <button>
+                        <img
+                            src="assets/projects/dna-02.jpg"
+                            alt=""
+                        >
+                    </button>
+
+                    <button>
+                        <img
+                            src="assets/projects/dna-03.jpg"
+                            alt=""
+                        >
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="modal-grid">
+
+                <div class="modal-main-content">
+
+
+                    <section>
+
+                        <span class="modal-label">
+                            CONTEXTO
+                        </span>
+
+                        <h3>
+                            O problema
+                        </h3>
+
+                        <p id="modalProblem">
+                            Descreva aqui o problema que
+                            motivou o projeto.
+                        </p>
+
+                    </section>
+
+
+                    <section>
+
+                        <span class="modal-label">
+                            OBJETIVO
+                        </span>
+
+                        <h3>
+                            O que foi construído
+                        </h3>
+
+                        <p id="modalObjective">
+                            Explique aqui o objetivo principal
+                            da solução.
+                        </p>
+
+                    </section>
+
+
+                    <section>
+
+                        <span class="modal-label">
+                            FUNCIONALIDADES
+                        </span>
+
+                        <h3>
+                            O que a aplicação faz
+                        </h3>
+
+                        <ul id="modalFeatures">
+                        </ul>
+
+                    </section>
+
+
+                    <section>
+
+                        <span class="modal-label">
+                            REQUISITOS
+                        </span>
+
+                        <h3>
+                            Requisitos do sistema
+                        </h3>
+
+                        <div
+                            class="requirements-grid"
+                            id="modalRequirements"
+                        >
+                        </div>
+
+                    </section>
+
+
+                    <section>
+
+                        <span class="modal-label">
+                            ARQUITETURA
+                        </span>
+
+                        <h3>
+                            Estrutura da solução
+                        </h3>
+
+                        <div class="architecture-image">
+
+                            <img
+                                id="modalArchitecture"
+                                src=""
+                                alt="Arquitetura do projeto"
+                            >
+
+                        </div>
+
+                    </section>
+
+
+                    <section>
+
+                        <span class="modal-label">
+                            DESAFIOS
+                        </span>
+
+                        <h3>
+                            O que precisei resolver
+                        </h3>
+
+                        <p id="modalChallenges">
+                        </p>
+
+                    </section>
+
+
+                    <section>
+
+                        <span class="modal-label">
+                            APRENDIZADOS
+                        </span>
+
+                        <h3>
+                            O que esse projeto acrescentou
+                        </h3>
+
+                        <p id="modalLearning">
+                        </p>
+
+                    </section>
+
+
+                </div>
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="modal-sidebar">
+
+                    <div>
+
+                        <span>
+                            TECNOLOGIAS
+                        </span>
+
+                        <div
+                            class="modal-tech"
+                            id="modalTech"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            TIPO
+                        </span>
+
+                        <strong id="modalType">
+                            Full Stack
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <strong id="modalStatus">
+                            Concluído
+                        </strong>
+
+                    </div>
+
+
+                    <div class="modal-links">
+
+                        <a
+                            href="#"
+                            id="modalGithub"
+                            target="_blank"
+                        >
+                            Código no GitHub
+                            <span>↗</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            id="modalDemo"
+                            target="_blank"
+                        >
+                            Ver aplicação
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 <script src="script.js"></script>

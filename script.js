@@ -1,121 +1,213 @@
-/* =========================================================
-   DADOS DOS PROJETOS
-========================================================= */
+/* =====================================================
+   TEMA
+===================================================== */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+const themeIcon =
+    document.getElementById("themeIcon");
+
+
+const savedTheme =
+    localStorage.getItem("theme");
+
+
+if (savedTheme === "light") {
+
+    document.body.classList.add("light");
+
+    themeIcon.textContent = "☀";
+
+}
+
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light");
+
+    const isLight =
+        document.body.classList.contains("light");
+
+    localStorage.setItem(
+        "theme",
+        isLight ? "light" : "dark"
+    );
+
+    themeIcon.textContent =
+        isLight ? "☀" : "☾";
+
+});
+
+
+
+/* =====================================================
+   IDIOMA
+===================================================== */
+
+const languageToggle =
+    document.getElementById("languageToggle");
+
+const languageCurrent =
+    document.getElementById("languageCurrent");
+
+
+let currentLanguage =
+    localStorage.getItem("language") || "pt";
+
+
+function updateLanguage() {
+
+    document
+        .querySelectorAll("[data-pt][data-en]")
+        .forEach(element => {
+
+            element.textContent =
+                element.dataset[currentLanguage];
+
+        });
+
+
+    languageCurrent.textContent =
+        currentLanguage.toUpperCase();
+
+}
+
+
+updateLanguage();
+
+
+languageToggle.addEventListener("click", () => {
+
+    currentLanguage =
+        currentLanguage === "pt"
+            ? "en"
+            : "pt";
+
+    localStorage.setItem(
+        "language",
+        currentLanguage
+    );
+
+    updateLanguage();
+
+});
+
+
+
+/* =====================================================
+   PROJETOS
+===================================================== */
 
 const projects = {
+
+
+    /* =================================================
+       DNA
+    ================================================= */
 
     dna: {
 
         number: "01",
 
-        category: "FULL STACK · E-COMMERCE",
+        category:
+            "FULL STACK · E-COMMERCE",
 
-        title: "DNA Jeanswear",
+        title:
+            "DNA Jeanswear",
 
-        subtitle:
-            "Experiência de e-commerce desenvolvida com foco em tecnologia, personalização e experiência de compra.",
+        description:
+            "E-commerce de jeanswear pensado para unir experiência digital, identidade visual e recursos tecnológicos.",
 
-        context:
-            "Projeto de e-commerce de jeanswear criado para explorar uma experiência de compra mais tecnológica, mantendo uma interface simples, elegante e funcional. A proposta envolve organização de catálogo, escolha de variações e recursos de personalização.",
+        mainImage:
+            "assets/projects/dna-cover.jpg",
 
-        objective:
-            "Construir uma experiência de compra que conecte desenvolvimento de software, UX e recursos tecnológicos, criando uma aplicação que possa evoluir para uma solução completa de comércio eletrônico.",
+        gallery: [
+
+            "assets/projects/dna-01.jpg",
+
+            "assets/projects/dna-02.jpg",
+
+            "assets/projects/dna-03.jpg"
+
+        ],
+
+        architecture:
+            "assets/projects/dna-architecture.jpg",
 
         problem:
-            "Como criar uma experiência de e-commerce que seja simples para o usuário, mas que também consiga incorporar recursos tecnológicos e personalização?",
+            "Aqui você poderá explicar o problema que identificou, o contexto do projeto e por que a solução foi necessária.",
+
+        objective:
+            "Construir uma experiência de e-commerce moderna, funcional e preparada para incorporar recursos de personalização e tecnologia.",
 
         features: [
 
+            "Catálogo de produtos",
+
+            "Página detalhada de produto",
+
+            "Seleção de variações",
+
+            "Experiência responsiva",
+
+            "Provador virtual",
+
+            "Arquitetura preparada para evolução",
+
+            "Integração com API"
+
+        ],
+
+        requirements: [
+
             {
-                icon: "fa-shirt",
-                title: "Catálogo de produtos",
-                description:
-                    "Organização dos produtos, categorias, informações e variações."
+                title: "Funcional",
+                text: "O sistema deve permitir navegação e visualização dos produtos."
             },
 
             {
-                icon: "fa-palette",
-                title: "Variações",
-                description:
-                    "Possibilidade de selecionar diferentes versões do produto."
+                title: "Responsivo",
+                text: "A interface deve funcionar em diferentes tamanhos de tela."
             },
 
             {
-                icon: "fa-mobile-screen",
-                title: "Experiência responsiva",
-                description:
-                    "Interface pensada para diferentes tamanhos de tela."
+                title: "Performance",
+                text: "A aplicação deve manter boa experiência durante a navegação."
             },
 
             {
-                icon: "fa-user",
-                title: "Experiência personalizada",
-                description:
-                    "Estrutura preparada para recursos de personalização e recomendação."
+                title: "Usabilidade",
+                text: "As ações principais devem ser facilmente identificáveis."
             }
 
         ],
 
-        functionalRequirements: [
-
-            "Visualizar produtos disponíveis.",
-
-            "Visualizar detalhes de cada produto.",
-
-            "Selecionar variações.",
-
-            "Adicionar produtos ao carrinho.",
-
-            "Navegar entre diferentes categorias.",
-
-            "Acessar informações detalhadas do produto."
-
-        ],
-
-        nonFunctionalRequirements: [
-
-            "Interface responsiva.",
-
-            "Boa usabilidade.",
-
-            "Código organizado e modular.",
-
-            "Boa performance de carregamento.",
-
-            "Arquitetura preparada para evolução."
-
-        ],
-
-        stack: [
-
-            "C#",
-            "REST API",
-            "JavaScript",
-            "HTML",
-            "CSS",
-            "Git",
-            "GitHub"
-
-        ],
-
-        process:
-            "O projeto foi estruturado a partir da definição da experiência que o usuário deveria ter. A partir disso, foram organizados os componentes da interface, fluxo de navegação, estrutura dos produtos e integração entre frontend e backend.",
-
         challenges:
-            "Um dos principais desafios foi equilibrar a identidade visual com a necessidade de manter a interface clara e funcional, além de pensar na aplicação como um produto que pode crescer tecnicamente.",
+            "Descreva aqui as decisões técnicas, problemas encontrados e como você resolveu cada um deles.",
 
         learning:
-            "O projeto ajudou a aprofundar conhecimentos sobre desenvolvimento de interfaces, organização de componentes, experiência do usuário e integração entre diferentes camadas de uma aplicação.",
+            "Descreva o que você aprendeu tecnicamente, quais decisões mudaram sua forma de desenvolver e quais conceitos conseguiu aplicar.",
 
-        images: [
+        technologies: [
 
-            "assets/projeto-dna/01.png",
+            "devicon-csharp-plain",
 
-            "assets/projeto-dna/02.png",
+            "devicon-react-original",
 
-            "assets/projeto-dna/03.png"
+            "devicon-javascript-plain",
+
+            "devicon-typescript-plain",
+
+            "devicon-amazonwebservices-plain-wordmark"
 
         ],
+
+        type:
+            "Full Stack",
+
+        status:
+            "Em desenvolvimento",
 
         github:
             "https://github.com/juliaDemartini",
@@ -126,221 +218,104 @@ const projects = {
     },
 
 
-    foodexpress: {
-
-        number: "02",
-
-        category: "WEB APPLICATION",
-
-        title: "FoodExpress",
-
-        subtitle:
-            "Aplicação web desenvolvida para explorar desenvolvimento de software e experiência de usuário.",
-
-        context:
-            "Projeto desenvolvido como aplicação prática para trabalhar conceitos de desenvolvimento web, organização de interface e fluxo de usuário.",
-
-        objective:
-            "Construir uma aplicação funcional utilizando conceitos de desenvolvimento web e organização de componentes.",
-
-        problem:
-            "Como transformar uma necessidade de negócio em uma aplicação web simples, organizada e funcional?",
-
-        features: [
-
-            {
-                icon: "fa-burger",
-                title: "Catálogo",
-                description:
-                    "Visualização organizada dos produtos disponíveis."
-            },
-
-            {
-                icon: "fa-cart-shopping",
-                title: "Carrinho",
-                description:
-                    "Estrutura para seleção e organização dos itens."
-            },
-
-            {
-                icon: "fa-mobile-screen",
-                title: "Responsividade",
-                description:
-                    "Interface adaptável para diferentes dispositivos."
-            },
-
-            {
-                icon: "fa-code",
-                title: "Integração",
-                description:
-                    "Estrutura preparada para integração com APIs."
-            }
-
-        ],
-
-        functionalRequirements: [
-
-            "Visualizar produtos.",
-
-            "Selecionar itens.",
-
-            "Gerenciar itens selecionados.",
-
-            "Visualizar informações do produto."
-
-        ],
-
-        nonFunctionalRequirements: [
-
-            "Interface responsiva.",
-
-            "Código organizado.",
-
-            "Boa usabilidade.",
-
-            "Manutenibilidade."
-
-        ],
-
-        stack: [
-
-            "JavaScript",
-            "HTML",
-            "CSS",
-            "API",
-            "Git",
-            "GitHub"
-
-        ],
-
-        process:
-            "O desenvolvimento foi dividido entre estruturação da interface, implementação das interações e organização do código.",
-
-        challenges:
-            "Organizar a aplicação de forma que os componentes e funcionalidades pudessem evoluir sem comprometer a experiência do usuário.",
-
-        learning:
-            "A experiência contribuiu para consolidar fundamentos de desenvolvimento web e organização de aplicações.",
-
-        images: [
-
-            "assets/foodexpress/01.png",
-            "assets/foodexpress/02.png",
-            "assets/foodexpress/03.png"
-
-        ],
-
-        github:
-            "https://github.com/juliaDemartini",
-
-        demo:
-            "#"
-
-    },
-
+    /* =================================================
+       VALORECO
+    ================================================= */
 
     valoreco: {
 
-        number: "03",
+        number: "02",
 
-        category: "IOT · HARDWARE · SOFTWARE",
+        category:
+            "HARDWARE · SOFTWARE · AUTOMATION",
 
-        title: "ValorEco",
+        title:
+            "ValorEco",
 
-        subtitle:
-            "Conceito de solução de reciclagem inteligente conectando hardware, sensores e software.",
+        description:
+            "Sistema de incentivo à reciclagem integrando software, hardware e automação.",
 
-        context:
-            "Projeto pensado para utilizar tecnologia como ferramenta de incentivo à reciclagem e conscientização ambiental.",
+        mainImage:
+            "assets/projects/valoreco-cover.jpg",
 
-        objective:
-            "Criar uma solução que conectasse um dispositivo físico a uma aplicação, permitindo transformar ações de reciclagem em uma experiência tecnológica.",
+        gallery: [
+
+            "assets/projects/valoreco-01.jpg",
+
+            "assets/projects/valoreco-02.jpg",
+
+            "assets/projects/valoreco-03.jpg"
+
+        ],
+
+        architecture:
+            "assets/projects/valoreco-architecture.jpg",
 
         problem:
-            "Como utilizar tecnologia e automação para incentivar comportamentos sustentáveis?",
+            "Descreva aqui o problema ambiental ou de experiência que o projeto buscou solucionar.",
+
+        objective:
+            "Criar uma solução tecnológica capaz de conectar descarte, automação e incentivo ao usuário.",
 
         features: [
 
+            "Identificação do descarte",
+
+            "Sensores",
+
+            "Automação",
+
+            "Sistema de pontuação",
+
+            "Integração hardware/software"
+
+        ],
+
+        requirements: [
+
             {
-                icon: "fa-microchip",
-                title: "Sensores",
-                description:
-                    "Utilização de sensores para identificar eventos no dispositivo."
+                title: "Hardware",
+                text: "Integração com sensores e microcontrolador."
             },
 
             {
-                icon: "fa-recycle",
-                title: "Reciclagem",
-                description:
-                    "Conceito direcionado ao descarte consciente."
+                title: "Automação",
+                text: "Execução automática das etapas do processo."
             },
 
             {
-                icon: "fa-trophy",
-                title: "Recompensas",
-                description:
-                    "Sistema pensado para incentivar a participação."
+                title: "Interface",
+                text: "Apresentação das informações para o usuário."
             },
 
             {
-                icon: "fa-diagram-project",
-                title: "Integração",
-                description:
-                    "Conexão entre hardware e software."
+                title: "Confiabilidade",
+                text: "Funcionamento consistente durante a operação."
             }
 
         ],
 
-        functionalRequirements: [
-
-            "Detectar eventos utilizando sensores.",
-
-            "Processar informações do dispositivo.",
-
-            "Registrar interações.",
-
-            "Apresentar informações ao usuário."
-
-        ],
-
-        nonFunctionalRequirements: [
-
-            "Confiabilidade.",
-
-            "Baixo consumo.",
-
-            "Facilidade de manutenção.",
-
-            "Integração entre componentes."
-
-        ],
-
-        stack: [
-
-            "Arduino",
-            "C/C++",
-            "Sensores",
-            "IoT",
-            "Software"
-
-        ],
-
-        process:
-            "O projeto começou pela definição do problema e posteriormente passou pela prototipação do dispositivo, integração dos componentes e estruturação da solução.",
-
         challenges:
-            "Integrar componentes físicos e software mantendo uma comunicação consistente entre as diferentes partes da solução.",
+            "Documente aqui os desafios encontrados na integração entre hardware e software.",
 
         learning:
-            "O projeto proporcionou experiência prática com prototipação, eletrônica, sensores e pensamento sistêmico.",
+            "Descreva os principais conhecimentos adquiridos durante o desenvolvimento.",
 
-        images: [
+        technologies: [
 
-            "assets/valoreco/01.png",
-            "assets/valoreco/02.png",
-            "assets/valoreco/03.png"
+            "devicon-arduino-plain",
+
+            "devicon-javascript-plain",
+
+            "devicon-react-original"
 
         ],
+
+        type:
+            "Hardware + Software",
+
+        status:
+            "Concluído",
 
         github:
             "https://github.com/juliaDemartini",
@@ -351,110 +326,104 @@ const projects = {
     },
 
 
-    storyfox: {
+    /* =================================================
+       FOOD EXPRESS
+    ================================================= */
 
-        number: "04",
+    foodexpress: {
 
-        category: "SAAS · AI · AUTOMATION",
+        number: "03",
 
-        title: "StoryFox",
+        category:
+            "WEB DEVELOPMENT",
 
-        subtitle:
-            "Conceito de SaaS para automação de conteúdo, gestão de interações e suporte utilizando inteligência artificial.",
+        title:
+            "FoodExpress",
 
-        context:
-            "Projeto criado a partir da necessidade de centralizar tarefas relacionadas à produção de conteúdo e interação com clientes.",
+        description:
+            "Aplicação web desenvolvida para explorar conceitos de desenvolvimento full stack e experiência de usuário.",
 
-        objective:
-            "Estruturar uma plataforma capaz de automatizar processos repetitivos e oferecer ferramentas para criação e gerenciamento de conteúdo.",
+        mainImage:
+            "assets/projects/foodexpress-cover.jpg",
+
+        gallery: [
+
+            "assets/projects/foodexpress-01.jpg",
+
+            "assets/projects/foodexpress-02.jpg",
+
+            "assets/projects/foodexpress-03.jpg"
+
+        ],
+
+        architecture:
+            "assets/projects/foodexpress-architecture.jpg",
 
         problem:
-            "Como reduzir tarefas repetitivas de criação e atendimento sem perder organização e controle?",
+            "Descreva o problema e contexto que deram origem à aplicação.",
+
+        objective:
+            "Construir uma aplicação funcional aplicando conceitos de interface, lógica e organização de código.",
 
         features: [
 
+            "Interface responsiva",
+
+            "Navegação entre páginas",
+
+            "Componentização",
+
+            "Interações de usuário",
+
+            "Organização de dados"
+
+        ],
+
+        requirements: [
+
             {
-                icon: "fa-wand-magic-sparkles",
-                title: "Geração de conteúdo",
-                description:
-                    "Estrutura para criação de conteúdos utilizando IA."
+                title: "Interface",
+                text: "Experiência intuitiva e responsiva."
             },
 
             {
-                icon: "fa-comments",
-                title: "Automação",
-                description:
-                    "Automação de interações e respostas."
+                title: "Código",
+                text: "Estrutura organizada e reutilizável."
             },
 
             {
-                icon: "fa-chart-line",
-                title: "Relatórios",
-                description:
-                    "Estrutura para acompanhamento de resultados."
+                title: "Responsividade",
+                text: "Adaptação para diferentes dispositivos."
             },
 
             {
-                icon: "fa-filter",
-                title: "Filtros",
-                description:
-                    "Organização das informações e interações."
+                title: "Usabilidade",
+                text: "Fluxos simples e claros."
             }
 
         ],
 
-        functionalRequirements: [
-
-            "Criar conteúdos.",
-
-            "Gerenciar interações.",
-
-            "Organizar informações.",
-
-            "Visualizar relatórios.",
-
-            "Gerenciar diferentes fluxos."
-
-        ],
-
-        nonFunctionalRequirements: [
-
-            "Escalabilidade.",
-
-            "Segurança.",
-
-            "Usabilidade.",
-
-            "Manutenibilidade."
-
-        ],
-
-        stack: [
-
-            "Node.js",
-            "Firebase",
-            "JavaScript",
-            "AI",
-            "REST API"
-
-        ],
-
-        process:
-            "A solução foi pensada inicialmente como um produto SaaS, começando pela identificação das principais dores do usuário, definição das funcionalidades e estruturação da arquitetura.",
-
         challenges:
-            "Transformar diferentes necessidades de automação em funcionalidades que pudessem coexistir dentro de uma mesma plataforma.",
+            "Documente aqui os principais desafios de desenvolvimento.",
 
         learning:
-            "O projeto ampliou a visão sobre desenvolvimento de produtos, arquitetura de sistemas, automação e aplicação de inteligência artificial.",
+            "Documente aqui os aprendizados técnicos e de processo.",
 
-        images: [
+        technologies: [
 
-            "assets/storyfox/01.png",
-            "assets/storyfox/02.png",
-            "assets/storyfox/03.png"
+            "devicon-html5-plain",
+
+            "devicon-css3-plain",
+
+            "devicon-javascript-plain"
 
         ],
+
+        type:
+            "Web",
+
+        status:
+            "Concluído",
 
         github:
             "https://github.com/juliaDemartini",
@@ -467,95 +436,73 @@ const projects = {
 };
 
 
-/* =========================================================
-   ELEMENTOS
-========================================================= */
 
-const modal = document.getElementById("caseModal");
+/* =====================================================
+   ELEMENTOS DO MODAL
+===================================================== */
 
-const closeButton = document.getElementById("caseClose");
+const modal =
+    document.getElementById("projectModal");
 
-const projectButtons =
-    document.querySelectorAll(".project-open");
+const modalClose =
+    document.getElementById("modalClose");
 
+const modalTitle =
+    document.getElementById("modalTitle");
 
-/* =========================================================
-   ELEMENTOS DO CASE
-========================================================= */
+const modalNumber =
+    document.getElementById("modalNumber");
 
-const caseTitle =
-    document.getElementById("caseTitle");
+const modalCategory =
+    document.getElementById("modalCategory");
 
-const caseCategory =
-    document.getElementById("caseCategory");
+const modalDescription =
+    document.getElementById("modalDescription");
 
-const caseSubtitle =
-    document.getElementById("caseSubtitle");
+const modalMainImage =
+    document.getElementById("modalMainImage");
 
-const caseNumber =
-    document.getElementById("caseNumber");
+const modalProblem =
+    document.getElementById("modalProblem");
 
-const caseContext =
-    document.getElementById("caseContext");
+const modalObjective =
+    document.getElementById("modalObjective");
 
-const caseObjective =
-    document.getElementById("caseObjective");
+const modalFeatures =
+    document.getElementById("modalFeatures");
 
-const caseProblem =
-    document.getElementById("caseProblem");
+const modalRequirements =
+    document.getElementById("modalRequirements");
 
-const caseProcess =
-    document.getElementById("caseProcess");
+const modalArchitecture =
+    document.getElementById("modalArchitecture");
 
-const caseChallenges =
-    document.getElementById("caseChallenges");
+const modalChallenges =
+    document.getElementById("modalChallenges");
 
-const caseLearning =
-    document.getElementById("caseLearning");
+const modalLearning =
+    document.getElementById("modalLearning");
 
-const caseFeatures =
-    document.getElementById("caseFeatures");
+const modalTech =
+    document.getElementById("modalTech");
 
-const functionalRequirements =
-    document.getElementById("functionalRequirements");
+const modalType =
+    document.getElementById("modalType");
 
-const nonFunctionalRequirements =
-    document.getElementById("nonFunctionalRequirements");
+const modalStatus =
+    document.getElementById("modalStatus");
 
-const caseStack =
-    document.getElementById("caseStack");
+const modalGithub =
+    document.getElementById("modalGithub");
 
-const caseGithub =
-    document.getElementById("caseGithub");
-
-const caseDemo =
-    document.getElementById("caseDemo");
+const modalDemo =
+    document.getElementById("modalDemo");
 
 
-/* =========================================================
+
+/* =====================================================
    ABRIR PROJETO
-========================================================= */
-
-projectButtons.forEach(button => {
-
-    button.addEventListener("click", function () {
-
-        const card =
-            this.closest(".project-card");
-
-        const projectId =
-            card.dataset.project;
-
-        openProject(projectId);
-
-    });
-
-});
-
-
-/* =========================================================
-   FUNÇÃO PRINCIPAL
-========================================================= */
+===================================================== */
 
 function openProject(projectId) {
 
@@ -565,272 +512,215 @@ function openProject(projectId) {
     if (!project) return;
 
 
-    /* TEXTO */
-
-    caseTitle.textContent =
-        project.title;
-
-    caseCategory.textContent =
-        project.category;
-
-    caseSubtitle.textContent =
-        project.subtitle;
-
-    caseNumber.textContent =
+    modalNumber.textContent =
         project.number;
 
-    caseContext.textContent =
-        project.context;
+    modalCategory.textContent =
+        project.category;
 
-    caseObjective.textContent =
-        project.objective;
+    modalTitle.textContent =
+        project.title;
 
-    caseProblem.textContent =
+    modalDescription.textContent =
+        project.description;
+
+    modalProblem.textContent =
         project.problem;
 
-    caseProcess.textContent =
-        project.process;
+    modalObjective.textContent =
+        project.objective;
 
-    caseChallenges.textContent =
+    modalChallenges.textContent =
         project.challenges;
 
-    caseLearning.textContent =
+    modalLearning.textContent =
         project.learning;
 
+    modalType.textContent =
+        project.type;
 
-    /* =====================================================
-       FUNCIONALIDADES
-    ====================================================== */
+    modalStatus.textContent =
+        project.status;
 
-    caseFeatures.innerHTML = "";
-
-    project.features.forEach(feature => {
-
-        const element =
-            document.createElement("div");
-
-        element.className = "feature";
-
-        element.innerHTML = `
-
-            <div class="feature-icon">
-
-                <i class="fa-solid ${feature.icon}"></i>
-
-            </div>
-
-            <h4>
-                ${feature.title}
-            </h4>
-
-            <p>
-                ${feature.description}
-            </p>
-
-        `;
-
-        caseFeatures.appendChild(element);
-
-    });
-
-
-    /* =====================================================
-       REQUISITOS FUNCIONAIS
-    ====================================================== */
-
-    functionalRequirements.innerHTML = "";
-
-    project.functionalRequirements.forEach(requirement => {
-
-        const li =
-            document.createElement("li");
-
-        li.textContent =
-            requirement;
-
-        functionalRequirements.appendChild(li);
-
-    });
-
-
-    /* =====================================================
-       REQUISITOS NÃO FUNCIONAIS
-    ====================================================== */
-
-    nonFunctionalRequirements.innerHTML = "";
-
-    project.nonFunctionalRequirements.forEach(requirement => {
-
-        const li =
-            document.createElement("li");
-
-        li.textContent =
-            requirement;
-
-        nonFunctionalRequirements.appendChild(li);
-
-    });
-
-
-    /* =====================================================
-       STACK
-    ====================================================== */
-
-    caseStack.innerHTML = "";
-
-    project.stack.forEach(technology => {
-
-        const element =
-            document.createElement("span");
-
-        element.className =
-            "stack-item";
-
-        element.textContent =
-            technology;
-
-        caseStack.appendChild(element);
-
-    });
-
-
-    /* =====================================================
-       LINKS
-    ====================================================== */
-
-    caseGithub.href =
+    modalGithub.href =
         project.github;
 
-    caseDemo.href =
+    modalDemo.href =
         project.demo;
 
 
-    /* =====================================================
-       IMAGENS
-    ====================================================== */
+    /* IMAGEM PRINCIPAL */
 
-    setupCaseImage(
-        "caseImage1",
-        project.images[0]
+    modalMainImage.src =
+        project.mainImage;
+
+    modalMainImage.alt =
+        project.title;
+
+
+    /* ARQUITETURA */
+
+    modalArchitecture.src =
+        project.architecture;
+
+
+    /* FUNCIONALIDADES */
+
+    modalFeatures.innerHTML = "";
+
+    project.features.forEach(feature => {
+
+        const li =
+            document.createElement("li");
+
+        li.textContent =
+            feature;
+
+        modalFeatures.appendChild(li);
+
+    });
+
+
+    /* REQUISITOS */
+
+    modalRequirements.innerHTML = "";
+
+    project.requirements.forEach(requirement => {
+
+        const div =
+            document.createElement("div");
+
+        div.className =
+            "requirement";
+
+        div.innerHTML = `
+
+            <strong>
+                ${requirement.title}
+            </strong>
+
+            <span>
+                ${requirement.text}
+            </span>
+
+        `;
+
+        modalRequirements.appendChild(div);
+
+    });
+
+
+    /* TECNOLOGIAS */
+
+    modalTech.innerHTML = "";
+
+    project.technologies.forEach(icon => {
+
+        const element =
+            document.createElement("i");
+
+        element.className =
+            icon;
+
+        modalTech.appendChild(element);
+
+    });
+
+
+    /* GALERIA */
+
+    const thumbnailButtons =
+        document.querySelectorAll(
+            ".gallery-thumbnails button"
+        );
+
+
+    thumbnailButtons.forEach(
+        (button, index) => {
+
+            if (project.gallery[index]) {
+
+                const img =
+                    button.querySelector("img");
+
+                img.src =
+                    project.gallery[index];
+
+                img.alt =
+                    project.title;
+
+                button.onclick = () => {
+
+                    modalMainImage.src =
+                        project.gallery[index];
+
+                };
+
+            }
+
+        }
     );
 
-    setupCaseImage(
-        "caseImage2",
-        project.images[1]
-    );
 
-    setupCaseImage(
-        "caseImage3",
-        project.images[2]
-    );
-
-
-    /* =====================================================
-       MODAL
-    ====================================================== */
+    /* ABRIR */
 
     modal.classList.add("active");
 
-    document.body.classList.add("modal-open");
+    modal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
 
-    modal.scrollTop = 0;
-
-}
-
-
-/* =========================================================
-   IMAGENS
-========================================================= */
-
-function setupCaseImage(
-    elementId,
-    imagePath
-) {
-
-    const image =
-        document.getElementById(elementId);
-
-    if (!image) return;
-
-
-    image.src = imagePath;
-
-
-    image.onload = function () {
-
-        image.style.display =
-            "block";
-
-        const placeholder =
-            image.parentElement.querySelector(
-                ".gallery-placeholder"
-            );
-
-        if (placeholder) {
-
-            placeholder.style.display =
-                "none";
-
-        }
-
-    };
-
-
-    image.onerror = function () {
-
-        image.style.display =
-            "none";
-
-    };
+    document.body.style.overflow =
+        "hidden";
 
 }
 
 
-/* =========================================================
-   FECHAR MODAL
-========================================================= */
 
-function closeModal() {
+/* =====================================================
+   FECHAR
+===================================================== */
+
+function closeProject() {
 
     modal.classList.remove("active");
 
-    document.body.classList.remove("modal-open");
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.style.overflow =
+        "";
 
 }
 
 
-closeButton.addEventListener(
+modalClose.addEventListener(
     "click",
-    closeModal
+    closeProject
 );
 
 
-/* =========================================================
-   CLICAR FORA
-========================================================= */
-
-modal
-    .querySelector(".case-overlay")
+document
+    .querySelector(".modal-overlay")
     .addEventListener(
         "click",
-        closeModal
+        closeProject
     );
 
 
-/* =========================================================
-   ESC
-========================================================= */
-
 document.addEventListener(
     "keydown",
-    function(event) {
+    event => {
 
         if (
             event.key === "Escape" &&
             modal.classList.contains("active")
         ) {
 
-            closeModal();
+            closeProject();
 
         }
 
@@ -838,59 +728,32 @@ document.addEventListener(
 );
 
 
-/* =========================================================
-   NAVBAR — ACTIVE LINK
-========================================================= */
 
-const sections =
-    document.querySelectorAll(
-        "section[id]"
-    );
+/* =====================================================
+   CARDS
+===================================================== */
 
-const navLinks =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
+document
+    .querySelectorAll(".project-card")
+    .forEach(card => {
 
+        card.addEventListener(
+            "click",
+            event => {
 
-window.addEventListener(
-    "scroll",
-    () => {
+                /*
+                 Evita abrir duas vezes quando
+                 o clique acontecer no botão.
+                */
 
-        let current = "";
+                event.stopPropagation();
 
-        sections.forEach(section => {
+                const projectId =
+                    card.dataset.project;
 
-            const sectionTop =
-                section.offsetTop;
-
-            if (
-                window.scrollY >=
-                sectionTop - 200
-            ) {
-
-                current =
-                    section.getAttribute("id");
+                openProject(projectId);
 
             }
+        );
 
-        });
-
-
-        navLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                `#${current}`
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    }
-);
+    });
