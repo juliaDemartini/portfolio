@@ -1,23 +1,658 @@
-/* =====================================================
-   TEMA
-===================================================== */
+/* =========================================================
+   PROJECT DATA
+========================================================= */
 
-const themeToggle =
-    document.getElementById("themeToggle");
+const projects = [
 
-const themeIcon =
-    document.getElementById("themeIcon");
+    {
+        number: "01",
+
+        title: "DNA Jeanswear",
+
+        shortDescription:
+            "E-commerce de jeanswear desenvolvido com foco em experiência digital, personalização e tecnologia aplicada ao varejo.",
+
+        image: "",
+
+        technologies: [
+            {
+                name: "C#",
+                icon: "devicon-csharp-plain colored"
+            },
+            {
+                name: ".NET",
+                icon: "devicon-dotnetcore-plain colored"
+            },
+            {
+                name: "React",
+                icon: "devicon-react-original colored"
+            },
+            {
+                name: "JavaScript",
+                icon: "devicon-javascript-plain colored"
+            }
+        ],
+
+        github:
+            "https://github.com/juliaDemartini",
+
+        site:
+            "#",
+
+        description:
+            "Projeto de e-commerce de jeanswear pensado para explorar uma experiência de compra mais tecnológica, com foco em identidade visual, usabilidade, arquitetura de software e recursos de personalização.",
+
+        objective:
+            "Criar uma experiência digital de compra que conectasse produto, tecnologia e experiência do usuário em uma única aplicação.",
+
+        requirements: [
+            "Catálogo de produtos",
+            "Página detalhada do produto",
+            "Variações de peças",
+            "Seleção de tamanho",
+            "Carrinho",
+            "Experiência responsiva",
+            "Integração com API",
+            "Estrutura preparada para novas funcionalidades"
+        ],
+
+        functionalities: [
+            "Visualização de produtos",
+            "Seleção de variações",
+            "Interface responsiva",
+            "Componentização",
+            "Comunicação Front-end / Back-end",
+            "Estrutura preparada para provador virtual",
+            "Arquitetura preparada para chatbot"
+        ],
+
+        architecture:
+            "A aplicação foi estruturada separando a camada de apresentação da camada de serviços, permitindo que novas funcionalidades sejam adicionadas sem comprometer a estrutura existente.",
+
+        challenges:
+            "Um dos principais desafios foi equilibrar uma identidade visual marcante com uma experiência de navegação simples e funcional.",
+
+        images: [
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
 
 
-const savedTheme =
-    localStorage.getItem("theme");
+    {
+        number: "02",
+
+        title: "ValorEco",
+
+        shortDescription:
+            "Aplicação voltada à conscientização e incentivo à reciclagem utilizando tecnologia e automação.",
+
+        image: "",
+
+        technologies: [
+            {
+                name: "Arduino",
+                icon: "devicon-arduino-plain colored"
+            },
+            {
+                name: "JavaScript",
+                icon: "devicon-javascript-plain colored"
+            },
+            {
+                name: "HTML",
+                icon: "devicon-html5-plain colored"
+            },
+            {
+                name: "CSS",
+                icon: "devicon-css3-plain colored"
+            }
+        ],
+
+        github:
+            "https://github.com/juliaDemartini",
+
+        site:
+            "#",
+
+        description:
+            "Projeto que combina software e hardware para criar uma experiência de incentivo à reciclagem.",
+
+        objective:
+            "Explorar como sensores, automação e software podem trabalhar juntos para solucionar um problema do mundo real.",
+
+        requirements: [
+            "Integração com sensores",
+            "Identificação de interação",
+            "Sistema de recompensas",
+            "Interface de acompanhamento",
+            "Comunicação entre componentes"
+        ],
+
+        functionalities: [
+            "Detecção através de sensores",
+            "Automação",
+            "Registro de interações",
+            "Feedback ao usuário"
+        ],
+
+        architecture:
+            "O projeto conecta componentes físicos responsáveis pela coleta de dados com a camada de software responsável pelo processamento e apresentação das informações.",
+
+        challenges:
+            "A integração entre hardware e software exigiu testes sucessivos para garantir que os eventos físicos fossem corretamente interpretados pela aplicação.",
+
+        images: [
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+
+
+    {
+        number: "03",
+
+        title: "FoodExpress",
+
+        shortDescription:
+            "Projeto de aplicação voltada à experiência de pedidos e organização de produtos.",
+
+        image: "",
+
+        technologies: [
+            {
+                name: "React",
+                icon: "devicon-react-original colored"
+            },
+            {
+                name: "JavaScript",
+                icon: "devicon-javascript-plain colored"
+            },
+            {
+                name: "CSS",
+                icon: "devicon-css3-plain colored"
+            }
+        ],
+
+        github:
+            "https://github.com/juliaDemartini",
+
+        site:
+            "#",
+
+        description:
+            "Projeto desenvolvido para explorar construção de interfaces, componentes reutilizáveis e experiência de navegação em uma aplicação de pedidos.",
+
+        objective:
+            "Criar uma aplicação funcional utilizando conceitos de desenvolvimento de interfaces e organização de componentes.",
+
+        requirements: [
+            "Catálogo",
+            "Categorias",
+            "Detalhes dos itens",
+            "Carrinho",
+            "Interface responsiva"
+        ],
+
+        functionalities: [
+            "Navegação por categorias",
+            "Visualização de produtos",
+            "Adição ao carrinho",
+            "Atualização de quantidade",
+            "Layout responsivo"
+        ],
+
+        architecture:
+            "Interface estruturada em componentes reutilizáveis para facilitar manutenção e evolução da aplicação.",
+
+        challenges:
+            "Organizar diferentes estados da interface mantendo uma navegação simples e previsível.",
+
+        images: [
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+
+
+    {
+        number: "04",
+
+        title: "URL Shortened",
+
+        shortDescription:
+            "Aplicação para encurtamento e gerenciamento de URLs.",
+
+        image: "",
+
+        technologies: [
+            {
+                name: "JavaScript",
+                icon: "devicon-javascript-plain colored"
+            },
+            {
+                name: "Node.js",
+                icon: "devicon-nodejs-plain colored"
+            },
+            {
+                name: "PostgreSQL",
+                icon: "devicon-postgresql-plain colored"
+            }
+        ],
+
+        github:
+            "https://github.com/juliaDemartini",
+
+        site:
+            "#",
+
+        description:
+            "Projeto desenvolvido para explorar conceitos de API, persistência de dados, rotas e manipulação de informações.",
+
+        objective:
+            "Construir uma aplicação simples, porém estruturada, capaz de receber, processar e armazenar URLs.",
+
+        requirements: [
+            "Criação de URLs",
+            "Persistência",
+            "API",
+            "Rotas",
+            "Banco de dados"
+        ],
+
+        functionalities: [
+            "Encurtamento",
+            "Consulta",
+            "Persistência",
+            "Redirecionamento"
+        ],
+
+        architecture:
+            "Aplicação estruturada utilizando uma API responsável pelas regras de negócio e comunicação com o banco de dados.",
+
+        challenges:
+            "Trabalhar com persistência e comunicação entre diferentes camadas da aplicação.",
+
+        images: [
+            "",
+            "",
+            "",
+            ""
+        ]
+    }
+
+];
+
+
+/* =========================================================
+   DOM
+========================================================= */
+
+const projectsGrid = document.getElementById("projectsGrid");
+
+const projectModal = document.getElementById("projectModal");
+
+const modalContent = document.getElementById("modalContent");
+
+const modalClose = document.getElementById("modalClose");
+
+const modalOverlay = document.getElementById("modalOverlay");
+
+
+/* =========================================================
+   RENDER PROJECTS
+========================================================= */
+
+function renderProjects() {
+
+    projectsGrid.innerHTML = "";
+
+    projects.forEach((project, index) => {
+
+        const card = document.createElement("article");
+
+        card.className = "project-card";
+
+        card.addEventListener("click", () => {
+            openProject(index);
+        });
+
+
+        const imageHTML = project.image
+
+            ? `<img src="${project.image}" alt="${project.title}">`
+
+            : `
+                <div class="project-image-placeholder">
+                    ADICIONE A IMAGEM DO PROJETO
+                </div>
+            `;
+
+
+        const techHTML = project.technologies
+            .map(tech => `
+                <span title="${tech.name}">
+                    <i class="${tech.icon}"></i>
+                </span>
+            `)
+            .join("");
+
+
+        card.innerHTML = `
+
+            <div class="project-image">
+
+                ${imageHTML}
+
+                <span class="project-number">
+                    ${project.number}
+                </span>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="project-info">
+
+                    <h3>
+                        ${project.title}
+                    </h3>
+
+                    <p>
+                        ${project.shortDescription}
+                    </p>
+
+                    <div class="project-tech">
+                        ${techHTML}
+                    </div>
+
+                </div>
+
+                <div class="project-open">
+                    →
+                </div>
+
+            </div>
+        `;
+
+
+        projectsGrid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   OPEN PROJECT
+========================================================= */
+
+function openProject(index) {
+
+    const project = projects[index];
+
+    const technologiesHTML = project.technologies
+        .map(tech => `
+            <span class="modal-tech">
+
+                <i class="${tech.icon}"></i>
+
+                ${tech.name}
+
+            </span>
+        `)
+        .join("");
+
+
+    const requirementsHTML = project.requirements
+        .map(item => `<li>${item}</li>`)
+        .join("");
+
+
+    const functionalitiesHTML = project.functionalities
+        .map(item => `<li>${item}</li>`)
+        .join("");
+
+
+    const imagesHTML = project.images
+        .map((image, index) => {
+
+            if (image) {
+
+                return `
+                    <div class="modal-image ${index === 0 ? "large" : ""}">
+                        <img src="${image}" alt="${project.title} - imagem ${index + 1}">
+                    </div>
+                `;
+
+            }
+
+            return `
+                <div class="modal-image ${index === 0 ? "large" : ""}">
+                    ADICIONE A IMAGEM ${index + 1}
+                </div>
+            `;
+
+        })
+        .join("");
+
+
+    modalContent.innerHTML = `
+
+        <div class="modal-hero">
+
+            <span class="modal-number">
+                PROJECT ${project.number}
+            </span>
+
+            <h2>
+                ${project.title}
+            </h2>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <p class="modal-project-description">
+                ${project.description}
+            </p>
+
+
+            <div class="modal-actions">
+
+                <a
+                    href="${project.github}"
+                    target="_blank"
+                    class="modal-action"
+                >
+                    GitHub ↗
+                </a>
+
+                <a
+                    href="${project.site}"
+                    target="_blank"
+                    class="modal-action"
+                >
+                    Ver projeto ↗
+                </a>
+
+            </div>
+
+
+            <section class="modal-section">
+
+                <h3>
+                    Tecnologias
+                </h3>
+
+                <div class="modal-tech-list">
+
+                    ${technologiesHTML}
+
+                </div>
+
+            </section>
+
+
+            <section class="modal-section">
+
+                <h3>
+                    Objetivo
+                </h3>
+
+                <p>
+                    ${project.objective}
+                </p>
+
+            </section>
+
+
+            <section class="modal-section">
+
+                <h3>
+                    Requisitos
+                </h3>
+
+                <ul>
+                    ${requirementsHTML}
+                </ul>
+
+            </section>
+
+
+            <section class="modal-section">
+
+                <h3>
+                    Funcionalidades
+                </h3>
+
+                <ul>
+                    ${functionalitiesHTML}
+                </ul>
+
+            </section>
+
+
+            <section class="modal-section">
+
+                <h3>
+                    Arquitetura & Estrutura
+                </h3>
+
+                <p>
+                    ${project.architecture}
+                </p>
+
+            </section>
+
+
+            <section class="modal-section">
+
+                <h3>
+                    Desafios & Decisões
+                </h3>
+
+                <p>
+                    ${project.challenges}
+                </p>
+
+            </section>
+
+
+            <section class="modal-section">
+
+                <h3>
+                    Imagens do projeto
+                </h3>
+
+                <div class="modal-images">
+
+                    ${imagesHTML}
+
+                </div>
+
+            </section>
+
+        </div>
+    `;
+
+
+    projectModal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================================
+   CLOSE MODAL
+========================================================= */
+
+function closeProject() {
+
+    projectModal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+modalClose.addEventListener("click", closeProject);
+
+modalOverlay.addEventListener("click", closeProject);
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+        closeProject();
+    }
+
+});
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 30) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =========================================================
+   DARK / LIGHT MODE
+========================================================= */
+
+const themeToggle = document.getElementById("themeToggle");
+
+const themeIcon = document.getElementById("themeIcon");
+
+
+const savedTheme = localStorage.getItem("julia-theme");
 
 
 if (savedTheme === "light") {
 
     document.body.classList.add("light");
 
-    themeIcon.textContent = "☀";
+    themeIcon.textContent = "☾";
 
 }
 
@@ -29,731 +664,212 @@ themeToggle.addEventListener("click", () => {
     const isLight =
         document.body.classList.contains("light");
 
+
     localStorage.setItem(
-        "theme",
+        "julia-theme",
         isLight ? "light" : "dark"
     );
 
+
     themeIcon.textContent =
-        isLight ? "☀" : "☾";
+        isLight ? "☾" : "☼";
 
 });
 
 
+/* =========================================================
+   LANGUAGE
+========================================================= */
 
-/* =====================================================
-   IDIOMA
-===================================================== */
+const translations = {
 
-const languageToggle =
-    document.getElementById("languageToggle");
+    pt: {
 
-const languageCurrent =
-    document.getElementById("languageCurrent");
+        "nav.home": "Início",
+        "nav.about": "Sobre",
+        "nav.projects": "Projetos",
+        "nav.experience": "Experiência",
+        "nav.education": "Formação",
+        "nav.contact": "Vamos conversar",
 
+        "hero.availability":
+            "Aberta a oportunidades em tecnologia",
 
-let currentLanguage =
-    localStorage.getItem("language") || "pt";
+        "hero.role":
+            "Engenharia de Software · Desenvolvedora Full Stack",
 
+        "hero.description":
+            "Estudante de Engenharia de Software e Análise e Desenvolvimento de Sistemas, com experiência em desenvolvimento, pesquisa, automação e cloud.",
 
-function updateLanguage() {
+        "hero.projects":
+            "Ver projetos",
 
-    document
-        .querySelectorAll("[data-pt][data-en]")
-        .forEach(element => {
+        "about.title":
+            "Construir é a melhor forma de aprender.",
 
-            element.textContent =
-                element.dataset[currentLanguage];
+        "about.text1":
+            "Sou estudante de Engenharia de Software e Análise e Desenvolvimento de Sistemas. Minha jornada combina desenvolvimento de software, pesquisa, automação, cloud e construção de projetos próprios.",
 
-        });
+        "about.text2":
+            "Gosto de entender como as coisas funcionam por trás da interface: da modelagem de dados à arquitetura, passando pela experiência do usuário e pela implementação.",
 
+        "about.text3":
+            "Atualmente, direciono meus estudos e projetos para desenvolvimento Full Stack, C#, JavaScript, React, arquitetura de software e AWS.",
 
-    languageCurrent.textContent =
-        currentLanguage.toUpperCase();
+        "projects.title":
+            "Projetos que mostram como eu penso.",
 
-}
+        "projects.intro":
+            "Projetos desenvolvidos para transformar ideias em sistemas funcionais, explorando diferentes tecnologias, arquiteturas e problemas.",
 
+        "tech.title":
+            "Ferramentas que fazem parte da jornada.",
 
-updateLanguage();
+        "tech.description":
+            "Tecnologias utilizadas em projetos, estudos, pesquisa e experiências práticas.",
 
+        "cert.description":
+            "Certificação que representa minha base em conceitos fundamentais de cloud, serviços AWS, segurança, arquitetura e modelo de responsabilidade compartilhada.",
 
-languageToggle.addEventListener("click", () => {
+        "experience.title":
+            "Onde teoria virou prática.",
 
-    currentLanguage =
-        currentLanguage === "pt"
-            ? "en"
-            : "pt";
+        "education.title":
+            "Formação em construção.",
 
-    localStorage.setItem(
-        "language",
-        currentLanguage
-    );
+        "contact.title":
+            "Vamos construir alguma coisa?",
 
-    updateLanguage();
-
-});
-
-
-
-/* =====================================================
-   PROJETOS
-===================================================== */
-
-const projects = {
-
-
-    /* =================================================
-       DNA
-    ================================================= */
-
-    dna: {
-
-        number: "01",
-
-        category:
-            "FULL STACK · E-COMMERCE",
-
-        title:
-            "DNA Jeanswear",
-
-        description:
-            "E-commerce de jeanswear pensado para unir experiência digital, identidade visual e recursos tecnológicos.",
-
-        mainImage:
-            "assets/projects/dna-cover.jpg",
-
-        gallery: [
-
-            "assets/projects/dna-01.jpg",
-
-            "assets/projects/dna-02.jpg",
-
-            "assets/projects/dna-03.jpg"
-
-        ],
-
-        architecture:
-            "assets/projects/dna-architecture.jpg",
-
-        problem:
-            "Aqui você poderá explicar o problema que identificou, o contexto do projeto e por que a solução foi necessária.",
-
-        objective:
-            "Construir uma experiência de e-commerce moderna, funcional e preparada para incorporar recursos de personalização e tecnologia.",
-
-        features: [
-
-            "Catálogo de produtos",
-
-            "Página detalhada de produto",
-
-            "Seleção de variações",
-
-            "Experiência responsiva",
-
-            "Provador virtual",
-
-            "Arquitetura preparada para evolução",
-
-            "Integração com API"
-
-        ],
-
-        requirements: [
-
-            {
-                title: "Funcional",
-                text: "O sistema deve permitir navegação e visualização dos produtos."
-            },
-
-            {
-                title: "Responsivo",
-                text: "A interface deve funcionar em diferentes tamanhos de tela."
-            },
-
-            {
-                title: "Performance",
-                text: "A aplicação deve manter boa experiência durante a navegação."
-            },
-
-            {
-                title: "Usabilidade",
-                text: "As ações principais devem ser facilmente identificáveis."
-            }
-
-        ],
-
-        challenges:
-            "Descreva aqui as decisões técnicas, problemas encontrados e como você resolveu cada um deles.",
-
-        learning:
-            "Descreva o que você aprendeu tecnicamente, quais decisões mudaram sua forma de desenvolver e quais conceitos conseguiu aplicar.",
-
-        technologies: [
-
-            "devicon-csharp-plain",
-
-            "devicon-react-original",
-
-            "devicon-javascript-plain",
-
-            "devicon-typescript-plain",
-
-            "devicon-amazonwebservices-plain-wordmark"
-
-        ],
-
-        type:
-            "Full Stack",
-
-        status:
-            "Em desenvolvimento",
-
-        github:
-            "https://github.com/juliaDemartini",
-
-        demo:
-            "#"
-
+        "contact.description":
+            "Estou aberta a oportunidades de estágio e experiências que me permitam continuar desenvolvendo software, aprendendo e contribuindo em equipe."
     },
 
 
-    /* =================================================
-       VALORECO
-    ================================================= */
+    en: {
 
-    valoreco: {
+        "nav.home": "Home",
+        "nav.about": "About",
+        "nav.projects": "Projects",
+        "nav.experience": "Experience",
+        "nav.education": "Education",
+        "nav.contact": "Let's talk",
 
-        number: "02",
+        "hero.availability":
+            "Open to technology opportunities",
 
-        category:
-            "HARDWARE · SOFTWARE · AUTOMATION",
+        "hero.role":
+            "Software Engineering · Full Stack Developer",
 
-        title:
-            "ValorEco",
+        "hero.description":
+            "Software Engineering and Systems Development student with experience in development, research, automation and cloud.",
 
-        description:
-            "Sistema de incentivo à reciclagem integrando software, hardware e automação.",
+        "hero.projects":
+            "View projects",
 
-        mainImage:
-            "assets/projects/valoreco-cover.jpg",
+        "about.title":
+            "Building is the best way to learn.",
 
-        gallery: [
+        "about.text1":
+            "I am a Software Engineering and Systems Development student. My journey combines software development, research, automation, cloud and personal projects.",
 
-            "assets/projects/valoreco-01.jpg",
+        "about.text2":
+            "I like understanding how things work behind the interface: from data modeling and architecture to user experience and implementation.",
 
-            "assets/projects/valoreco-02.jpg",
+        "about.text3":
+            "I am currently focusing my studies and projects on Full Stack development, C#, JavaScript, React, software architecture and AWS.",
 
-            "assets/projects/valoreco-03.jpg"
+        "projects.title":
+            "Projects that show how I think.",
 
-        ],
+        "projects.intro":
+            "Projects created to transform ideas into functional systems while exploring different technologies, architectures and problems.",
 
-        architecture:
-            "assets/projects/valoreco-architecture.jpg",
+        "tech.title":
+            "Tools that are part of the journey.",
 
-        problem:
-            "Descreva aqui o problema ambiental ou de experiência que o projeto buscou solucionar.",
+        "tech.description":
+            "Technologies used across projects, studies, research and practical experiences.",
 
-        objective:
-            "Criar uma solução tecnológica capaz de conectar descarte, automação e incentivo ao usuário.",
+        "cert.description":
+            "Certification representing my foundation in cloud concepts, AWS services, security, architecture and the shared responsibility model.",
 
-        features: [
+        "experience.title":
+            "Where theory became practice.",
 
-            "Identificação do descarte",
+        "education.title":
+            "A formation still in progress.",
 
-            "Sensores",
+        "contact.title":
+            "Let's build something?",
 
-            "Automação",
-
-            "Sistema de pontuação",
-
-            "Integração hardware/software"
-
-        ],
-
-        requirements: [
-
-            {
-                title: "Hardware",
-                text: "Integração com sensores e microcontrolador."
-            },
-
-            {
-                title: "Automação",
-                text: "Execução automática das etapas do processo."
-            },
-
-            {
-                title: "Interface",
-                text: "Apresentação das informações para o usuário."
-            },
-
-            {
-                title: "Confiabilidade",
-                text: "Funcionamento consistente durante a operação."
-            }
-
-        ],
-
-        challenges:
-            "Documente aqui os desafios encontrados na integração entre hardware e software.",
-
-        learning:
-            "Descreva os principais conhecimentos adquiridos durante o desenvolvimento.",
-
-        technologies: [
-
-            "devicon-arduino-plain",
-
-            "devicon-javascript-plain",
-
-            "devicon-react-original"
-
-        ],
-
-        type:
-            "Hardware + Software",
-
-        status:
-            "Concluído",
-
-        github:
-            "https://github.com/juliaDemartini",
-
-        demo:
-            "#"
-
-    },
-
-
-    /* =================================================
-       FOOD EXPRESS
-    ================================================= */
-
-    foodexpress: {
-
-        number: "03",
-
-        category:
-            "WEB DEVELOPMENT",
-
-        title:
-            "FoodExpress",
-
-        description:
-            "Aplicação web desenvolvida para explorar conceitos de desenvolvimento full stack e experiência de usuário.",
-
-        mainImage:
-            "assets/projects/foodexpress-cover.jpg",
-
-        gallery: [
-
-            "assets/projects/foodexpress-01.jpg",
-
-            "assets/projects/foodexpress-02.jpg",
-
-            "assets/projects/foodexpress-03.jpg"
-
-        ],
-
-        architecture:
-            "assets/projects/foodexpress-architecture.jpg",
-
-        problem:
-            "Descreva o problema e contexto que deram origem à aplicação.",
-
-        objective:
-            "Construir uma aplicação funcional aplicando conceitos de interface, lógica e organização de código.",
-
-        features: [
-
-            "Interface responsiva",
-
-            "Navegação entre páginas",
-
-            "Componentização",
-
-            "Interações de usuário",
-
-            "Organização de dados"
-
-        ],
-
-        requirements: [
-
-            {
-                title: "Interface",
-                text: "Experiência intuitiva e responsiva."
-            },
-
-            {
-                title: "Código",
-                text: "Estrutura organizada e reutilizável."
-            },
-
-            {
-                title: "Responsividade",
-                text: "Adaptação para diferentes dispositivos."
-            },
-
-            {
-                title: "Usabilidade",
-                text: "Fluxos simples e claros."
-            }
-
-        ],
-
-        challenges:
-            "Documente aqui os principais desafios de desenvolvimento.",
-
-        learning:
-            "Documente aqui os aprendizados técnicos e de processo.",
-
-        technologies: [
-
-            "devicon-html5-plain",
-
-            "devicon-css3-plain",
-
-            "devicon-javascript-plain"
-
-        ],
-
-        type:
-            "Web",
-
-        status:
-            "Concluído",
-
-        github:
-            "https://github.com/juliaDemartini",
-
-        demo:
-            "#"
-
+        "contact.description":
+            "I am open to internship opportunities and experiences where I can continue developing software, learning and contributing to a team."
     }
 
 };
 
 
+let currentLanguage =
+    localStorage.getItem("julia-language") || "pt";
 
-/* =====================================================
-   ELEMENTOS DO MODAL
-===================================================== */
 
-const modal =
-    document.getElementById("projectModal");
+function applyLanguage(language) {
 
-const modalClose =
-    document.getElementById("modalClose");
+    const elements =
+        document.querySelectorAll("[data-i18n]");
 
-const modalTitle =
-    document.getElementById("modalTitle");
 
-const modalNumber =
-    document.getElementById("modalNumber");
+    elements.forEach(element => {
 
-const modalCategory =
-    document.getElementById("modalCategory");
+        const key =
+            element.getAttribute("data-i18n");
 
-const modalDescription =
-    document.getElementById("modalDescription");
+        if (translations[language][key]) {
 
-const modalMainImage =
-    document.getElementById("modalMainImage");
-
-const modalProblem =
-    document.getElementById("modalProblem");
-
-const modalObjective =
-    document.getElementById("modalObjective");
-
-const modalFeatures =
-    document.getElementById("modalFeatures");
-
-const modalRequirements =
-    document.getElementById("modalRequirements");
-
-const modalArchitecture =
-    document.getElementById("modalArchitecture");
-
-const modalChallenges =
-    document.getElementById("modalChallenges");
-
-const modalLearning =
-    document.getElementById("modalLearning");
-
-const modalTech =
-    document.getElementById("modalTech");
-
-const modalType =
-    document.getElementById("modalType");
-
-const modalStatus =
-    document.getElementById("modalStatus");
-
-const modalGithub =
-    document.getElementById("modalGithub");
-
-const modalDemo =
-    document.getElementById("modalDemo");
-
-
-
-/* =====================================================
-   ABRIR PROJETO
-===================================================== */
-
-function openProject(projectId) {
-
-    const project =
-        projects[projectId];
-
-    if (!project) return;
-
-
-    modalNumber.textContent =
-        project.number;
-
-    modalCategory.textContent =
-        project.category;
-
-    modalTitle.textContent =
-        project.title;
-
-    modalDescription.textContent =
-        project.description;
-
-    modalProblem.textContent =
-        project.problem;
-
-    modalObjective.textContent =
-        project.objective;
-
-    modalChallenges.textContent =
-        project.challenges;
-
-    modalLearning.textContent =
-        project.learning;
-
-    modalType.textContent =
-        project.type;
-
-    modalStatus.textContent =
-        project.status;
-
-    modalGithub.href =
-        project.github;
-
-    modalDemo.href =
-        project.demo;
-
-
-    /* IMAGEM PRINCIPAL */
-
-    modalMainImage.src =
-        project.mainImage;
-
-    modalMainImage.alt =
-        project.title;
-
-
-    /* ARQUITETURA */
-
-    modalArchitecture.src =
-        project.architecture;
-
-
-    /* FUNCIONALIDADES */
-
-    modalFeatures.innerHTML = "";
-
-    project.features.forEach(feature => {
-
-        const li =
-            document.createElement("li");
-
-        li.textContent =
-            feature;
-
-        modalFeatures.appendChild(li);
-
-    });
-
-
-    /* REQUISITOS */
-
-    modalRequirements.innerHTML = "";
-
-    project.requirements.forEach(requirement => {
-
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "requirement";
-
-        div.innerHTML = `
-
-            <strong>
-                ${requirement.title}
-            </strong>
-
-            <span>
-                ${requirement.text}
-            </span>
-
-        `;
-
-        modalRequirements.appendChild(div);
-
-    });
-
-
-    /* TECNOLOGIAS */
-
-    modalTech.innerHTML = "";
-
-    project.technologies.forEach(icon => {
-
-        const element =
-            document.createElement("i");
-
-        element.className =
-            icon;
-
-        modalTech.appendChild(element);
-
-    });
-
-
-    /* GALERIA */
-
-    const thumbnailButtons =
-        document.querySelectorAll(
-            ".gallery-thumbnails button"
-        );
-
-
-    thumbnailButtons.forEach(
-        (button, index) => {
-
-            if (project.gallery[index]) {
-
-                const img =
-                    button.querySelector("img");
-
-                img.src =
-                    project.gallery[index];
-
-                img.alt =
-                    project.title;
-
-                button.onclick = () => {
-
-                    modalMainImage.src =
-                        project.gallery[index];
-
-                };
-
-            }
+            element.textContent =
+                translations[language][key];
 
         }
+
+    });
+
+
+    document.documentElement.lang =
+        language === "pt" ? "pt-BR" : "en";
+
+
+    document.getElementById("languageText")
+        .textContent =
+        language === "pt" ? "EN" : "PT";
+
+
+    localStorage.setItem(
+        "julia-language",
+        language
     );
-
-
-    /* ABRIR */
-
-    modal.classList.add("active");
-
-    modal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-    document.body.style.overflow =
-        "hidden";
 
 }
 
 
-
-/* =====================================================
-   FECHAR
-===================================================== */
-
-function closeProject() {
-
-    modal.classList.remove("active");
-
-    modal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-    document.body.style.overflow =
-        "";
-
-}
-
-
-modalClose.addEventListener(
-    "click",
-    closeProject
-);
+applyLanguage(currentLanguage);
 
 
 document
-    .querySelector(".modal-overlay")
-    .addEventListener(
-        "click",
-        closeProject
-    );
+    .getElementById("languageToggle")
+    .addEventListener("click", () => {
 
+        currentLanguage =
+            currentLanguage === "pt"
+                ? "en"
+                : "pt";
 
-document.addEventListener(
-    "keydown",
-    event => {
-
-        if (
-            event.key === "Escape" &&
-            modal.classList.contains("active")
-        ) {
-
-            closeProject();
-
-        }
-
-    }
-);
-
-
-
-/* =====================================================
-   CARDS
-===================================================== */
-
-document
-    .querySelectorAll(".project-card")
-    .forEach(card => {
-
-        card.addEventListener(
-            "click",
-            event => {
-
-                /*
-                 Evita abrir duas vezes quando
-                 o clique acontecer no botão.
-                */
-
-                event.stopPropagation();
-
-                const projectId =
-                    card.dataset.project;
-
-                openProject(projectId);
-
-            }
-        );
+        applyLanguage(currentLanguage);
 
     });
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+renderProjects();
