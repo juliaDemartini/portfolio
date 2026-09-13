@@ -44,8 +44,8 @@ button {
     --surface-2: #15161d;
     --surface-3: #1a1b23;
 
-    --border: rgba(255,255,255,.10);
-    --border-strong: rgba(255,255,255,.16);
+    --border: rgba(255, 255, 255, .10);
+    --border-strong: rgba(255, 255, 255, .16);
 
     --text: #f4f3f7;
     --text-secondary: #a7a7b5;
@@ -82,12 +82,10 @@ button {
     padding: 18px 24px;
 
     background:
-        linear-gradient(
-            to bottom,
-            rgba(8,9,13,.96),
-            rgba(8,9,13,.72),
-            transparent
-        );
+        linear-gradient(to bottom,
+            rgba(8, 9, 13, .96),
+            rgba(8, 9, 13, .72),
+            transparent);
 
     backdrop-filter: blur(10px);
 }
@@ -100,7 +98,7 @@ button {
 
     border: 1px solid var(--border);
 
-    background: rgba(12,13,18,.84);
+    background: rgba(12, 13, 18, .84);
 
     border-radius: 999px;
 
@@ -168,7 +166,7 @@ button {
 .header-contact {
     background: #20212a;
 
-    border: 1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255, 255, 255, .05);
 
     padding: 12px 18px;
 
@@ -245,11 +243,9 @@ button {
     top: 80px;
 
     background:
-        radial-gradient(
-            circle,
-            rgba(129,60,255,.14),
-            transparent 65%
-        );
+        radial-gradient(circle,
+            rgba(129, 60, 255, .14),
+            transparent 65%);
 
     pointer-events: none;
 }
@@ -260,8 +256,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(360px, .8fr);
+        minmax(0, 1.05fr) minmax(360px, .8fr);
 
     gap: 70px;
 
@@ -282,7 +277,7 @@ button {
 
     border: 1px solid var(--border);
 
-    background: rgba(255,255,255,.025);
+    background: rgba(255, 255, 255, .025);
 
     border-radius: 999px;
 
@@ -304,7 +299,7 @@ button {
     border-radius: 50%;
 
     box-shadow:
-        0 0 0 4px rgba(74,222,128,.08);
+        0 0 0 4px rgba(74, 222, 128, .08);
 }
 
 .eyebrow {
@@ -391,11 +386,9 @@ button {
 }
 
 .btn-primary {
-    background: linear-gradient(
-        100deg,
-        var(--purple),
-        var(--pink)
-    );
+    background: linear-gradient(100deg,
+            var(--purple),
+            var(--pink));
 
     color: white;
 }
@@ -410,7 +403,7 @@ button {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.20);
+    background: rgba(255, 255, 255, .20);
 
     display: grid;
     place-items: center;
@@ -430,11 +423,11 @@ button {
 
     border: 1px solid var(--border-strong);
 
-    background: rgba(255,255,255,.025);
+    background: rgba(255, 255, 255, .025);
 }
 
 .btn-secondary:hover {
-    background: rgba(255,255,255,.07);
+    background: rgba(255, 255, 255, .07);
 
     transform: translateY(-3px);
 }
@@ -462,12 +455,12 @@ button {
 
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,.12);
+    border: 1px solid rgba(255, 255, 255, .12);
 
     background: #0f1015;
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.35);
+        0 30px 80px rgba(0, 0, 0, .35);
 
     transform: rotate(1deg);
 
@@ -630,7 +623,7 @@ button {
     color: #a9a9b7;
 }
 
-.section-heading > p {
+.section-heading>p {
     color: var(--text-secondary);
 
     line-height: 1.75;
@@ -669,7 +662,7 @@ button {
 .project-card:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(164,108,255,.4);
+    border-color: rgba(164, 108, 255, .4);
 
     background: #13141a;
 }
@@ -682,11 +675,9 @@ button {
     overflow: hidden;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #171321,
-            #101117
-        );
+            #101117);
 }
 
 .project-image img {
@@ -711,16 +702,12 @@ button {
     place-items: center;
 
     background:
-        radial-gradient(
-            circle at 70% 20%,
-            rgba(232,47,136,.22),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 30% 80%,
-            rgba(129,60,255,.25),
-            transparent 35%
-        ),
+        radial-gradient(circle at 70% 20%,
+            rgba(232, 47, 136, .22),
+            transparent 30%),
+        radial-gradient(circle at 30% 80%,
+            rgba(129, 60, 255, .25),
+            transparent 35%),
         #101116;
 }
 
@@ -762,9 +749,9 @@ button {
 
     border-radius: 50%;
 
-    background: rgba(8,9,13,.72);
+    background: rgba(8, 9, 13, .72);
 
-    border: 1px solid rgba(255,255,255,.14);
+    border: 1px solid rgba(255, 255, 255, .14);
 
     backdrop-filter: blur(10px);
 
@@ -966,7 +953,7 @@ button {
 .orbit {
     position: absolute;
 
-    border: 1px dashed rgba(255,255,255,.24);
+    border: 1px dashed rgba(255, 255, 255, .24);
 
     border-radius: 50%;
 
@@ -1003,7 +990,7 @@ button {
 
     transform: translate(-50%, -50%);
 
-    border: 1px solid rgba(164,108,255,.5);
+    border: 1px solid rgba(164, 108, 255, .5);
 
     border-radius: 50%;
 
@@ -1013,7 +1000,7 @@ button {
     background: #111019;
 
     box-shadow:
-        0 0 50px rgba(129,60,255,.08);
+        0 0 50px rgba(129, 60, 255, .08);
 
     z-index: 10;
 }
@@ -1078,10 +1065,10 @@ button {
 
     background: #f5f5f7;
 
-    border: 1px solid rgba(255,255,255,.25);
+    border: 1px solid rgba(255, 255, 255, .25);
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.35);
+        0 10px 30px rgba(0, 0, 0, .35);
 
     animation:
         counterRotate linear infinite;
@@ -1150,14 +1137,12 @@ button {
 
     from {
         transform:
-            translate(-50%, -50%)
-            rotate(0deg);
+            translate(-50%, -50%) rotate(0deg);
     }
 
     to {
         transform:
-            translate(-50%, -50%)
-            rotate(360deg);
+            translate(-50%, -50%) rotate(360deg);
     }
 
 }
@@ -1209,7 +1194,7 @@ button {
 
 .technology-item:hover {
 
-    border-color: rgba(164,108,255,.4);
+    border-color: rgba(164, 108, 255, .4);
 
     color: white;
 
@@ -1232,17 +1217,15 @@ button {
 
 .certification-card {
 
-    border: 1px solid rgba(164,108,255,.28);
+    border: 1px solid rgba(164, 108, 255, .28);
 
     border-radius: 28px;
 
     background:
 
-        linear-gradient(
-            100deg,
-            rgba(129,60,255,.09),
-            rgba(232,47,136,.05)
-        ),
+        linear-gradient(100deg,
+            rgba(129, 60, 255, .09),
+            rgba(232, 47, 136, .05)),
 
         #111219;
 
@@ -1341,7 +1324,7 @@ button {
 
     font-family: "JetBrains Mono", monospace;
 
-    color: rgba(255,255,255,.15);
+    color: rgba(255, 255, 255, .15);
 
     font-size: 35px;
 
@@ -1433,12 +1416,12 @@ button {
     background: var(--purple);
 
     box-shadow:
-        0 0 0 5px rgba(129,60,255,.10);
+        0 0 0 5px rgba(129, 60, 255, .10);
 
     margin-top: 5px;
 }
 
-.timeline-content > span {
+.timeline-content>span {
 
     color: var(--purple-light);
 
@@ -1541,7 +1524,7 @@ button {
     border-bottom: 1px solid var(--border);
 }
 
-.education-item > span {
+.education-item>span {
 
     color: var(--purple-light);
 
@@ -1604,12 +1587,12 @@ button {
 
 .course-card:hover {
 
-    border-color: rgba(164,108,255,.35);
+    border-color: rgba(164, 108, 255, .35);
 
     transform: translateY(-3px);
 }
 
-.course-card > span {
+.course-card>span {
 
     color: var(--text-muted);
 
@@ -1646,14 +1629,12 @@ button {
 
     gap: 25px;
 
-    border-color: rgba(164,108,255,.35);
+    border-color: rgba(164, 108, 255, .35);
 
     background:
-        linear-gradient(
-            120deg,
-            rgba(129,60,255,.10),
-            rgba(232,47,136,.05)
-        ),
+        linear-gradient(120deg,
+            rgba(129, 60, 255, .10),
+            rgba(232, 47, 136, .05)),
         var(--surface);
 }
 
@@ -1796,7 +1777,7 @@ button {
 
     color: white;
 
-    border-color: rgba(164,108,255,.45);
+    border-color: rgba(164, 108, 255, .45);
 
     transform: translateY(-3px);
 }
@@ -1847,7 +1828,7 @@ button {
 
     inset: 0;
 
-    background: rgba(3,4,7,.84);
+    background: rgba(3, 4, 7, .84);
 
     backdrop-filter: blur(14px);
 }
@@ -1871,7 +1852,7 @@ button {
     background: #111218;
 
     box-shadow:
-        0 50px 120px rgba(0,0,0,.5);
+        0 50px 120px rgba(0, 0, 0, .5);
 
     scrollbar-width: thin;
 }
@@ -1897,7 +1878,7 @@ button {
 
     border-radius: 50%;
 
-    background: rgba(20,21,28,.9);
+    background: rgba(20, 21, 28, .9);
 
     color: white;
 
@@ -1984,7 +1965,7 @@ button {
 
     border-color: var(--purple-light);
 
-    background: rgba(129,60,255,.08);
+    background: rgba(129, 60, 255, .08);
 }
 
 .modal-gallery {
@@ -2168,51 +2149,95 @@ button {
 
     .navigation {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        background: rgba(16, 17, 22, 0.98);
+        border: 1px solid var(--border-strong);
+        border-radius: var(--radius);
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+        gap: 20px;
+        backdrop-filter: blur(16px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        z-index: 1001;
     }
 
-    .hero-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 60px;
+    .navigation.active {
+        display: flex;
     }
 
-    .hero-code-wrapper {
-        justify-content: flex-start;
+    /* Exibe o botão do menu hambúrguer */
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--text);
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: .25s ease;
     }
 
-    .section-heading,
-    .experience-header,
-    .about-grid,
-    .education-grid,
-    .languages-inner {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
+    .menu-toggle:hover {
+        background: rgba(255, 255, 255, 0.05);
     }
+}
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .courses-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .course-card.featured {
-        grid-column: span 2;
-    }
-
-    .certification-card {
-        grid-template-columns: 70px 1fr;
-    }
-
-    .certification-mark {
+/* No desktop, esconde o botão do menu hamburguer */
+@media (min-width: 951px) {
+    .menu-toggle {
         display: none;
     }
-
 }
+
+.hero-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+}
+
+.hero-code-wrapper {
+    justify-content: flex-start;
+}
+
+.section-heading,
+.experience-header,
+.about-grid,
+.education-grid,
+.languages-inner {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+}
+
+.courses-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.course-card.featured {
+    grid-column: span 2;
+}
+
+.certification-card {
+    grid-template-columns: 70px 1fr;
+}
+
+.certification-mark {
+    display: none;
+}
+
 
 
 @media (max-width: 650px) {
@@ -2241,11 +2266,15 @@ button {
         padding-top: 100px;
     }
 
+    .orbit-container {
+        width: 100%;
+        max-width: 380px;
+        height: 380px;
+    }
+    
     .hero h1 {
-
-        font-size: 68px;
-
-        letter-spacing: -4px;
+        font-size: clamp(48px, 12vw, 68px);
+        letter-spacing: -3px;
     }
 
     .hero h2 {

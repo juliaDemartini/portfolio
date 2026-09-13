@@ -1231,3 +1231,36 @@ revealElements.forEach(element => {
     observer.observe(element);
 
 });
+
+/* =========================================================
+   MOBILE MENU TOGGLE
+========================================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navigation = document.querySelector(".navigation");
+
+if (menuToggle && navigation) {
+    menuToggle.addEventListener("click", () => {
+        navigation.classList.toggle("active");
+        
+        // Troca o ícone de barras para 'X' (fechar) e vice-versa
+        const icon = menuToggle.querySelector("i");
+        if (navigation.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
+    });
+
+    // Fecha o menu ao clicar em qualquer link da navegação
+    navigation.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navigation.classList.remove("active");
+            const icon = menuToggle.querySelector("i");
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        });
+    });
+}
