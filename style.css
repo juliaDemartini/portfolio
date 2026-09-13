@@ -2144,9 +2144,14 @@ button {
 /* =========================================================
    RESPONSIVE
 ========================================================= */
+/* =========================================================
+   RESPONSIVO CORRIGIDO
+========================================================= */
 
-@media (max-width: 950px) {
+/* Para telas menores que 768px (Celulares) */
+@media (max-width: 768px) {
 
+    /* Transforma a navegação num menu suspenso mobile */
     .navigation {
         display: none;
         position: absolute;
@@ -2161,7 +2166,7 @@ button {
         padding: 24px;
         gap: 20px;
         backdrop-filter: blur(16px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         z-index: 1001;
     }
 
@@ -2169,7 +2174,6 @@ button {
         display: flex;
     }
 
-    /* Exibe o botão do menu hambúrguer */
     .menu-toggle {
         display: grid;
         place-items: center;
@@ -2185,9 +2189,57 @@ button {
     }
 
     .menu-toggle:hover {
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255,255,255,0.05);
+    }
+
+    /* Agora sim o Hero empilha o código para baixo APENAS no celular */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .hero-code-wrapper {
+        justify-content: flex-start;
+    }
+
+    /* Outros ajustes de seções para celular */
+    .section-heading,
+    .experience-header,
+    .about-grid,
+    .education-grid,
+    .languages-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .course-card.featured {
+        grid-column: span 2;
+    }
+
+    .certification-card {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .certification-mark {
+        display: none;
     }
 }
+
+/* No desktop e notebooks, esconde o botão do menu hamburguer */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+    
 
 /* No desktop, esconde o botão do menu hamburguer */
 @media (min-width: 951px) {
