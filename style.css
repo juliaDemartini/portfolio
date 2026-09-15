@@ -1826,3 +1826,69 @@ button {
         transition-duration: .01ms !important;
     }
 }
+
+/* =========================================================
+   PROJECT MODAL TABS & DETAILS
+========================================================= */
+.project-modal-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 0 50px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 30px;
+}
+
+.project-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color .25s ease;
+}
+
+.project-tab:hover {
+    color: white;
+}
+
+.project-tab.active {
+    color: white;
+    font-weight: 600;
+}
+
+.project-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+.project-tab-content {
+    padding: 0 50px 50px;
+}
+
+.project-tab-panel {
+    display: none;
+}
+
+.project-tab-panel.active {
+    display: block;
+}
+
+/* Ajustes responsivos para as abas em telas menores */
+@media (max-width: 650px) {
+    .project-modal-tabs {
+        padding: 0 25px;
+        overflow-x: auto;
+    }
+    .project-tab-content {
+        padding: 0 25px 40px;
+    }
+}
