@@ -1990,8 +1990,8 @@ function renderProjects() {
 
                         <span>
                             ${currentLanguage === "pt"
-                                ? "ADICIONE SUA IMAGEM"
-                                : "ADD YOUR IMAGE"}
+                                ? "..."
+                                : "..."}
                         </span>
 
                     </div>
@@ -2213,8 +2213,8 @@ function openProject(project) {
 
                     ${
                         currentLanguage === "pt"
-                            ? "ADICIONE AQUI OUTRA IMAGEM DO PROJETO"
-                            : "ADD ANOTHER PROJECT IMAGE HERE"
+                            ? "..."
+                            : "..."
                     }
 
                 </div>
@@ -2228,8 +2228,8 @@ function openProject(project) {
 
                     ${
                         currentLanguage === "pt"
-                            ? "ADICIONE AQUI OUTRA IMAGEM DO PROJETO"
-                            : "ADD ANOTHER PROJECT IMAGE HERE"
+                            ? "..."
+                            : "..."
                     }
 
                 </div>
@@ -2251,8 +2251,8 @@ function openProject(project) {
                         <strong>
                             ${
                                 currentLanguage === "pt"
-                                    ? "IMAGEM PRINCIPAL"
-                                    : "MAIN IMAGE"
+                                    ? "..."
+                                    : "..."
                             }
                         </strong>
 
